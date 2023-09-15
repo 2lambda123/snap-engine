@@ -249,6 +249,7 @@ public class ColorSchemeInfo {
     }
 
 
+    // todo %d replacement, wavelength number formatting
     public static String getColorBarTitle(String colorBarTitle, String bandname,  String description, float wavelength, float angle, String units, boolean allowWavelengthZero) {
         
         String wavelengthString = "";

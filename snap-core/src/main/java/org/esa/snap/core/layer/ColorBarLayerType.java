@@ -100,14 +100,14 @@ public class ColorBarLayerType extends LayerType {
     public static final String PROPERTY_TITLE_LABEL = "Title";
     public static final String PROPERTY_TITLE_TOOLTIP = "Title text for the header of the " + COLOR_LOWER_CASE + " bar";
     public static final String PROPERTY_TITLE_ALIAS = PROPERTY_HEADER_TITLE_ROOT_ALIAS;
-    public static final String PROPERTY_TITLE_DEFAULT = "[DESCRIPTION]";
+    public static final String PROPERTY_TITLE_DEFAULT = "<INFO_ATTR=band_description>";
     public static final Class PROPERTY_TITLE_TYPE = String.class;
 
     public static final String PROPERTY_TITLE_ALT_KEY = PROPERTY_HEADER_TITLE_ROOT_KEY + ".alt";
     public static final String PROPERTY_TITLE_ALT_LABEL = "Title (Alternate)";
     public static final String PROPERTY_TITLE_ALT_TOOLTIP = "Alternate title for the " + COLOR_LOWER_CASE + " bar";
     public static final String PROPERTY_TITLE_ALT_ALIAS = PROPERTY_HEADER_TITLE_ROOT_ALIAS + "Alt";
-    public static final String PROPERTY_TITLE_ALT_DEFAULT = "[BANDNAME]";
+    public static final String PROPERTY_TITLE_ALT_DEFAULT = "[BAND]";
     public static final Class PROPERTY_TITLE_ALT_TYPE = String.class;
 
     public static final String PROPERTY_TITLE_ALT_USE_KEY = PROPERTY_HEADER_TITLE_ROOT_KEY + ".alt.use";
@@ -133,14 +133,14 @@ public class ColorBarLayerType extends LayerType {
     public static final String PROPERTY_UNITS_LABEL = "Units";
     public static final String PROPERTY_UNITS_TOOLTIP = "Units text for the header of the " + COLOR_LOWER_CASE + " bar";
     public static final String PROPERTY_UNITS_ALIAS = PROPERTY_HEADER_UNITS_ROOT_ALIAS;
-    public static final String PROPERTY_UNITS_DEFAULT = "[UNITS]";
+    public static final String PROPERTY_UNITS_DEFAULT = "<INFO_ATTR=units>";
     public static final Class PROPERTY_UNITS_TYPE = String.class;
 
     public static final String PROPERTY_UNITS_ALT_KEY = PROPERTY_HEADER_UNITS_ROOT_KEY + ".alt";
     public static final String PROPERTY_UNITS_ALT_LABEL = "Units (Alternate)";
     public static final String PROPERTY_UNITS_ALT_TOOLTIP = "Alternate units for the " + COLOR_LOWER_CASE + " bar";
     public static final String PROPERTY_UNITS_ALT_ALIAS = PROPERTY_HEADER_UNITS_ROOT_ALIAS + "Alt";
-    public static final String PROPERTY_UNITS_ALT_DEFAULT = "[BANDNAME]; [UNITS]";
+    public static final String PROPERTY_UNITS_ALT_DEFAULT = "[BAND]; [UNITS]";
     public static final Class PROPERTY_UNITS_ALT_TYPE = String.class;
 
     public static final String PROPERTY_UNITS_ALT_USE_KEY = PROPERTY_HEADER_UNITS_ROOT_KEY + ".alt.use";

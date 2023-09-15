@@ -18,6 +18,7 @@ package org.esa.snap.core.datamodel;
 import org.esa.snap.core.image.ImageManager;
 import org.esa.snap.core.layer.ColorBarLayer;
 import org.esa.snap.core.layer.ColorBarLayerType;
+import org.esa.snap.core.util.MetadataUtils;
 import org.esa.snap.core.util.PropertyMap;
 import org.esa.snap.core.util.StringUtils;
 
@@ -1760,8 +1761,8 @@ public class ImageLegend {
         float angle = raster.getProduct().getBand(raster.getName()).getAngularValue();
         boolean allowWavelengthZero = true;
 
-        titleString = ColorSchemeInfo.getColorBarTitle(titleString, bandname, description, wavelength, angle, units, allowWavelengthZero);
-
+//        titleString = ColorSchemeInfo.getColorBarTitle(titleString, bandname, description, wavelength, angle, units, allowWavelengthZero);
+        titleString = MetadataUtils.getReplacedStringAllVariables(titleString, raster, "", MetadataUtils.INFO_PARAM_WAVE);
         drawHeaderSubMethod(g2d, titleString, draw, isConvertCaret());
 
         g2d.setFont(origFont);
@@ -1800,8 +1801,8 @@ public class ImageLegend {
         float angle = raster.getProduct().getBand(raster.getName()).getAngularValue();
         boolean allowWavelengthZero = true;
 
-        unitsString = ColorSchemeInfo.getColorBarTitle(unitsString, bandname, description, wavelength, angle, units, allowWavelengthZero);
-
+//        unitsString = ColorSchemeInfo.getColorBarTitle(unitsString, bandname, description, wavelength, angle, units, allowWavelengthZero);
+        unitsString = MetadataUtils.getReplacedStringAllVariables(unitsString, raster, "", MetadataUtils.INFO_PARAM_WAVE);
 
         if (isUnitsParenthesis() && unitsString != null) {
             if (unitsString.trim().startsWith("(") && unitsString.trim().endsWith(")")) {

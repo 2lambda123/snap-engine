@@ -6,6 +6,7 @@ import com.bc.ceres.glayer.LayerTypeRegistry;
 import com.bc.ceres.grender.Rendering;
 import com.bc.ceres.grender.Viewport;
 import org.esa.snap.core.datamodel.*;
+import org.esa.snap.core.util.MetadataUtils;
 import org.esa.snap.core.util.ProductUtils;
 
 import java.awt.*;
@@ -33,84 +34,16 @@ public class MetaDataLayer extends Layer {
     private double ptsToPixelsMultiplier = NULL_DOUBLE;
 
 
-    private final String INFO_PARAM_FILE = "FILE";
-    private final String INFO_PARAM_PROCESSING_VERSION = "PROCESSING_VERSION";
-    private final String INFO_PARAM_SENSOR = "SENSOR";
-    private final String INFO_PARAM_PLATFORM = "PLATFORM";
-    private final String INFO_PARAM_PROJECTION = "PROJECTION";
-    private final String INFO_PARAM_RESOLUTION = "RESOLUTION";
-    private final String INFO_PARAM_DAY_NIGHT = "DAY_NIGHT";
-    private final String INFO_PARAM_ORBIT = "ORBIT";
-    private final String INFO_PARAM_START_ORBIT = "START_ORBIT";
-    private final String INFO_PARAM_END_ORBIT = "END_ORBIT";
-    private final String INFO_PARAM_BAND = "BAND";
-    private final String INFO_PARAM_UNIT = "UNIT";
-    private final String INFO_PARAM_BAND_DESCRIPTION = "BAND_DESCRIPTION";
-    private final String INFO_PARAM_FILE_LOCATION = "FILE_LOCATION";
-    private final String INFO_PARAM_PRODUCT_TYPE = "PRODUCT_TYPE";
-    private final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
-    private final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
-    private final String INFO_PARAM_SCENE_HEIGHT = "SCENE_HEIGHT";
-    private final String INFO_PARAM_SCENE_WIDTH = "SCENE_WIDTH";
-    private final String INFO_PARAM_SCENE_SIZE = "SCENE_SIZE";
 
 
-    private final String INFO_PARAM_WAVE = "WAVE";
-    private final String INFO_PARAM_ANGLE = "ANGLE";
-    private final String INFO_PARAM_FLAG_CODING = "FLAG_CODING";
-    private final String INFO_PARAM_VALID_PIXEL_EXPRESSION = "VALID_PIXEL_EXPRESSION";
-    private final String INFO_PARAM_NO_DATA_VALUE = "NO_DATA_VALUE";
-    private final String INFO_PARAM_IS_NO_DATA_VALUE_SET = "IS_NO_DATA_VALUE_SET";
-    private final String INFO_PARAM_IS_NO_DATA_VALUE_USED = "IS_NO_DATA_VALUE_USED";
-    private final String INFO_PARAM_IS_SCALING_APPLIED = "IS_SCALING_APPLIED";
-    private final String INFO_PARAM_SCALING_FACTOR = "SCALING_FACTOR";
-    private final String INFO_PARAM_SCALING_OFFSET = "SCALING_OFFSET";
-    private final String INFO_PARAM_IS_LOG_SCALED = "IS_LOG_SCALED";
-    private final String INFO_PARAM_IS_PALETTE_LOG_SCALED = "IS_PALETTE_LOG_SCALED";
-    private final String INFO_PARAM_NODE_DISPLAY_NAMES = "NODE_DISPLAY_NAMES";
-    private final String INFO_PARAM_NODE_NAMES = "NODE_NAMES";
+
+
 
 
     boolean showNullKeys = true;
 
 
-    private String[] INFO_PARAMS = {
-            INFO_PARAM_FILE,
-//            INFO_PARAM_PROCESSING_VERSION,
-//            INFO_PARAM_SENSOR,
-//            INFO_PARAM_PLATFORM,
-//            INFO_PARAM_PROJECTION,
-//            INFO_PARAM_RESOLUTION,
-//            INFO_PARAM_DAY_NIGHT,
-//            INFO_PARAM_ORBIT,
-//            INFO_PARAM_START_ORBIT,
-//            INFO_PARAM_END_ORBIT,
-            INFO_PARAM_BAND,
-            INFO_PARAM_UNIT,
-            INFO_PARAM_BAND_DESCRIPTION,
-            INFO_PARAM_FILE_LOCATION,
-            INFO_PARAM_PRODUCT_TYPE,
-            INFO_PARAM_SCENE_START_TIME,
-            INFO_PARAM_SCENE_END_TIME,
-            INFO_PARAM_SCENE_HEIGHT,
-            INFO_PARAM_SCENE_WIDTH,
-            INFO_PARAM_SCENE_SIZE,
 
-            INFO_PARAM_WAVE,
-            INFO_PARAM_ANGLE,
-            INFO_PARAM_FLAG_CODING,
-            INFO_PARAM_VALID_PIXEL_EXPRESSION,
-            INFO_PARAM_NO_DATA_VALUE,
-            INFO_PARAM_IS_NO_DATA_VALUE_SET,
-            INFO_PARAM_IS_NO_DATA_VALUE_USED,
-            INFO_PARAM_IS_SCALING_APPLIED,
-            INFO_PARAM_SCALING_FACTOR,
-            INFO_PARAM_SCALING_OFFSET,
-            INFO_PARAM_IS_LOG_SCALED,
-            INFO_PARAM_IS_PALETTE_LOG_SCALED,
-            INFO_PARAM_NODE_DISPLAY_NAMES,
-            INFO_PARAM_NODE_NAMES
-    };
 
 
 //    public static enum InfoFields {
@@ -214,7 +147,7 @@ public class MetaDataLayer extends Layer {
 
 
             for (String curr : getMetadataArrayList(getMarginMetadata3())) {
-                for (String key : getAllPossibleRelatedKeys(curr)) {
+                for (String key : MetadataUtils.getAllPossibleRelatedKeys(curr)) {
                     if (ProductUtils.isMetadataKeyExists(raster.getProduct(), key)) {
                         marginMetadataCombinedArrayList.add(key);
                     }
@@ -222,7 +155,7 @@ public class MetaDataLayer extends Layer {
             }
 
             for (String curr : getMetadataArrayList(getMarginMetadata4())) {
-                for (String key : getAllPossibleRelatedKeys(curr)) {
+                for (String key : MetadataUtils.getAllPossibleRelatedKeys(curr)) {
                     if (ProductUtils.isMetadataKeyExists(raster.getProduct(), key)) {
                         marginMetadataCombinedArrayList.add(key);
                     }
@@ -235,7 +168,7 @@ public class MetaDataLayer extends Layer {
 
             if (displayAllInfo()) {
                 marginInfoCombinedArrayList.clear();
-                for (String infoField : INFO_PARAMS) {
+                for (String infoField : MetadataUtils.INFO_PARAMS) {
                     marginInfoCombinedArrayList.add(infoField.toLowerCase());
                 }
             }
@@ -377,28 +310,7 @@ public class MetaDataLayer extends Layer {
         }
     }
 
-    private String[] getAllPossibleRelatedKeys(String key) {
-        ArrayList<String[]> keySets = new ArrayList<String[]>();
 
-        keySets.add(ProductUtils.METADATA_POSSIBLE_PROJECTION_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_SENSOR_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_PLATFORM_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_PROCESSING_VERSION_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_DAY_NIGHT_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_ORBIT_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_START_ORBIT_KEYS);
-        keySets.add(ProductUtils.METADATA_POSSIBLE_END_ORBIT_KEYS);
-
-        for (String[] keySet : keySets) {
-            for (String keyInSet : keySet) {
-                if (keyInSet.equals(key)) {
-                    return keySet;
-                }
-            }
-        }
-
-        return new String[]{key};
-    }
 
     private void addFromMetadataList(ArrayList<String> footerMetadataCombinedArrayList, List<String> footerList, boolean isMeta, boolean globalAttributes) {
         for (String currKey : footerMetadataCombinedArrayList) {
@@ -407,7 +319,7 @@ public class MetaDataLayer extends Layer {
                 if (!isMeta) {
                     int length = currKey.length();
                     if (length > 2) {
-                        currParam = getDerivedMeta(currKey.toUpperCase());
+                        currParam = MetadataUtils.getDerivedMeta(currKey.toUpperCase(), raster, MetadataUtils.INFO_PARAM_WAVE);
 
                         if (getMarginMetadataKeysShow()) {
                             currParam = currKey + getMarginMetadataDelimiter() + currParam;
@@ -473,468 +385,8 @@ public class MetaDataLayer extends Layer {
         return converted.toString();
     }
 
-    private String replaceStringVariables(String inputString, boolean showKeys, String replaceKey) {
-        if (inputString != null && inputString.length() > 0) {
-////            inputString = inputString.replace("[FILE]", raster.getProduct().getName());
-////            inputString = inputString.replace("[File]", raster.getProduct().getName());
-//            inputString = replaceStringVariablesCase(inputString, "[FILE]", raster.getProduct().getName());
-//
-//            inputString = inputString.replace("[BAND]", raster.getName());
-//            inputString = inputString.replace("[BAND_DESCRIPTION]", raster.getDescription());
-//
-//            inputString = inputString.replace("[PROCESSING_VERSION]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PROCESSING_VERSION_KEYS));
-//            inputString = inputString.replace("[SENSOR]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_SENSOR_KEYS));
-//            inputString = inputString.replace("[PLATFORM]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PLATFORM_KEYS));
-//            inputString = inputString.replace("[PROJECTION]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PROJECTION_KEYS));
-//            inputString = inputString.replace("[RESOLUTION]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_RESOLUTION_KEYS));
-//
-//            inputString = inputString.replace("[DAY_NIGHT]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_DAY_NIGHT_KEYS));
-//            inputString = inputString.replace("[ORBIT]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_ORBIT_KEYS));
-//            inputString = inputString.replace("[START_ORBIT]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_START_ORBIT_KEYS));
-//            inputString = inputString.replace("[END_ORBIT]", ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_END_ORBIT_KEYS));
-//
-//
-//            inputString = inputString.replace("[ID]", ProductUtils.getMetaData(raster.getProduct(), "id"));
-//            inputString = inputString.replace("[L2_FLAG_NAMES]", ProductUtils.getMetaData(raster.getProduct(), "l2_flag_names"));
-//
-//            inputString = inputString.replace("[TITLE]", raster.getProduct().toString());
-//            inputString = inputString.replace("[FILE_LOCATION]", raster.getProduct().getFileLocation().toString());
-//            inputString = inputString.replace("[PRODUCT_TYPE]", raster.getProduct().getProductType());
-//            inputString = inputString.replace("[SCENE_START_TIME]", raster.getProduct().getStartTime().toString());
-//            inputString = inputString.replace("[SCENE_END_TIME]", raster.getProduct().getEndTime().toString());
-//            inputString = inputString.replace("[SCENE_HEIGHT]", Integer.toString(raster.getRasterHeight()));
-//            inputString = inputString.replace("[SCENE_WIDTH]", Integer.toString(raster.getRasterWidth()));
-//            String sceneSize = "(w x h) " + raster.getRasterWidth() + " pixels x " + raster.getRasterHeight() + " pixels";
-//            inputString = inputString.replace("[SCENE_SIZE]", sceneSize);
-//
-//            raster.getImageInfo().getColorPaletteDef().isLogScaled();
-//            raster.getValidPixelExpression();
-//            raster.getUnit();
-//            raster.getOverlayMaskGroup().getNodeDisplayNames();
-//            raster.getOverlayMaskGroup().getNodeNames();
-//            raster.getProduct().getBand(raster.getName()).getSpectralWavelength();
-//            raster.getProduct().getBand(raster.getName()).getAngularValue();
-//            raster.getProduct().getBand(raster.getName()).getFlagCoding();
-//            raster.getNoDataValue();
-//            raster.isNoDataValueSet();
-//            raster.isNoDataValueUsed();
-//            raster.isScalingApplied();
-//            raster.getScalingFactor();
-//            raster.getScalingOffset();
-//            raster.getProduct().getMetadataRoot().getElement("Band_Attributes").getElement(raster.getName()).getAttribute("reference").getData().getElemString();
-//            raster.getProduct().getMetadataRoot().getElement("Band_Attributes").getElement(raster.getName()).getAttribute("valid_min").getData().getElemString();
-//            raster.getProduct().getMetadataRoot().getElement("Band_Attributes").getElement(raster.getName()).getAttribute("valid_max").getData().getElemString();
 
 
-            String metaId = null;
-            String beforeMetaData = "";
-            String afterMetaData = "";
-            String metaStart = "";
-
-
-            String META_START = replaceKey;
-
-
-            String META_END = ">";
-
-
-            switch (META_START) {
-                case "<M=":
-                    inputString = inputString.replace("<m=", META_START);
-                    break;
-
-                case "<G=":
-                    inputString = inputString.replace("<g=", META_START);
-                    break;
-
-                case "<MG=":
-                    inputString = inputString.replace("<mg=", META_START);
-                    inputString = inputString.replace("<Mg=", META_START);
-                    break;
-
-                case "<META=":
-                    inputString = inputString.replace("<Meta=", META_START);
-                    inputString = inputString.replace("<meta=", META_START);
-                    break;
-
-                case "<FILE_META=":
-                    inputString = inputString.replace("<File_Meta=", META_START);
-                    inputString = inputString.replace("<file_meta=", META_START);
-                    break;
-
-                case "<B=":
-                    inputString = inputString.replace("<b=", META_START);
-                    break;
-
-                case "<MB=":
-                    inputString = inputString.replace("<Mb=", META_START);
-                    inputString = inputString.replace("<mb=", META_START);
-                    break;
-
-                case "<BAND_META=":
-                    inputString = inputString.replace("<Band_Meta=", META_START);
-                    inputString = inputString.replace("<band_meta=", META_START);
-                    break;
-
-                case "<I=":
-                    inputString = inputString.replace("<i=", META_START);
-                    break;
-
-                case "<INFO=":
-                    inputString = inputString.replace("<Info=", META_START);
-                    inputString = inputString.replace("<info=", META_START);
-                    break;
-
-                case "<BAND_INFO=":
-                    inputString = inputString.replace("<Band_Info=", META_START);
-                    inputString = inputString.replace("<band_info=", META_START);
-                    break;
-
-                case "<FILE_INFO=":
-                    inputString = inputString.replace("<File_Info=", META_START);
-                    inputString = inputString.replace("<file_info=", META_START);
-                    break;
-            }
-
-
-            int whileCnt = 0;
-            boolean hasMetaData = (inputString.contains(META_START) && inputString.contains(META_START)) ? true : false;
-
-
-            while (hasMetaData && whileCnt < 10) {
-                String[] arr1 = inputString.split(META_START, 2);
-
-                if (arr1 != null) {
-                    if (arr1.length == 1) {
-                        beforeMetaData = arr1[0];
-                        metaStart = "";
-                    } else if (arr1.length == 2) {
-                        beforeMetaData = arr1[0];
-                        metaStart = arr1[1];
-                    }
-                } else {
-                    beforeMetaData = "";
-                    metaStart = "";
-                }
-
-                if (metaStart != null && metaStart.length() > 0) {
-                    String[] arr2 = metaStart.split(META_END, 2);
-
-                    if (arr2 != null && arr2.length == 2) {
-                        metaId = arr2[0];
-                        afterMetaData = arr2[1];
-                    }
-                }
-
-                if (metaId != null && metaId.length() > 0) {
-                    String value = "";
-
-
-                    switch (META_START) {
-                        case "<META=":
-                            value = getFileMetaWithPossibleVariantKeys(metaId);
-                            break;
-
-                        case "<M=":
-                            value = getFileMetaWithPossibleVariantKeys(metaId);
-                            break;
-
-                        case "<G=":
-                            value = getFileMetaWithPossibleVariantKeys(metaId);
-                            break;
-
-                        case "<MG=":
-                            value = getFileMetaWithPossibleVariantKeys(metaId);
-                            break;
-
-                        case "<FILE_META=":
-                            value = getFileMetaWithPossibleVariantKeys(metaId);
-                            break;
-
-
-                        case "<B=":
-                            value = ProductUtils.getBandMetaData(raster.getProduct(), metaId, raster.getName());
-                            break;
-
-                        case "<MB=":
-                            value = ProductUtils.getBandMetaData(raster.getProduct(), metaId, raster.getName());
-                            break;
-
-                        case "<BAND_META=":
-                            value = ProductUtils.getBandMetaData(raster.getProduct(), metaId, raster.getName());
-                            break;
-
-                        case "<I=":
-                            value = getDerivedMeta(metaId.toUpperCase());
-                            break;
-
-                        case "<INFO=":
-                            value = getDerivedMeta(metaId.toUpperCase());
-                            break;
-
-                        case "<FILE_INFO=":
-                            value = getDerivedMeta(metaId.toUpperCase());
-                            break;
-
-                        case "<BAND_INFO=":
-                            value = getDerivedMeta(metaId.toUpperCase());
-                            break;
-
-
-                    }
-
-                    if (showKeys) {
-                        inputString = beforeMetaData + metaId + getMarginMetadataDelimiter() + value + afterMetaData;
-                    } else {
-                        inputString = beforeMetaData + value + afterMetaData;
-                    }
-                }
-
-                hasMetaData = (inputString.contains(META_START) && inputString.contains(META_END)) ? true : false;
-
-                whileCnt++;
-            }
-
-        }
-
-        return inputString;
-    }
-
-
-    private String getFileMetaWithPossibleVariantKeys(String metaId) {
-        String value = ProductUtils.getMetaData(raster.getProduct(), metaId);
-        if (value == null || value.length() == 0) {
-            for (String keyInSet : getAllPossibleRelatedKeys(metaId)) {
-                value = ProductUtils.getMetaData(raster.getProduct(), keyInSet);
-                if (value != null && value.length() > 0) {
-                    metaId = keyInSet;
-                    break;
-                }
-            }
-        }
-
-        return value;
-    }
-
-    private String getDerivedMeta(String inputString) {
-        String value = "";
-
-
-        if (inputString != null && inputString.length() > 0) {
-            inputString = inputString.toUpperCase();
-
-            switch (inputString) {
-
-
-                case INFO_PARAM_FILE:
-                    try {
-                        value = raster.getProduct().getName();
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_FILE_LOCATION:
-                    try {
-                        value = raster.getProduct().getFileLocation().toString();
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_PRODUCT_TYPE:
-                    try {
-                        value = raster.getProduct().getProductType();
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_SCENE_START_TIME:
-                    try {
-                        value = raster.getProduct().getStartTime().toString();
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_SCENE_END_TIME:
-                    try {
-                        value = raster.getProduct().getEndTime().toString();
-                    } catch (Exception e) {
-                    }
-                    break;
-
-//                case INFO_PARAM_PROCESSING_VERSION:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PROCESSING_VERSION_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_SENSOR:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_SENSOR_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_PLATFORM:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PLATFORM_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_PROJECTION:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PROJECTION_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_RESOLUTION:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_RESOLUTION_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_DAY_NIGHT:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_DAY_NIGHT_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_ORBIT:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_ORBIT_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_START_ORBIT:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_START_ORBIT_KEYS);
-//                    break;
-//
-//                case INFO_PARAM_END_ORBIT:
-//                    value = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_END_ORBIT_KEYS);
-//                    break;
-
-                case INFO_PARAM_BAND:
-                    value = raster.getName();
-                    break;
-
-
-                case INFO_PARAM_UNIT:
-                    value = raster.getUnit();
-                    break;
-
-                case INFO_PARAM_BAND_DESCRIPTION:
-                    value = raster.getDescription();
-                    break;
-
-                case INFO_PARAM_SCENE_HEIGHT:
-                    value = Integer.toString(raster.getRasterHeight());
-                    break;
-
-                case INFO_PARAM_SCENE_WIDTH:
-                    value = Integer.toString(raster.getRasterWidth());
-                    break;
-
-                case INFO_PARAM_SCENE_SIZE:
-                    value = "(w x h) " + raster.getRasterWidth() + " pixels x " + raster.getRasterHeight() + " pixels";
-                    break;
-
-                case INFO_PARAM_WAVE:
-                    value = String.valueOf(raster.getProduct().getBand(raster.getName()).getSpectralWavelength());
-                    break;
-
-                case INFO_PARAM_ANGLE:
-                    value = String.valueOf(raster.getProduct().getBand(raster.getName()).getAngularValue());
-                    break;
-
-                case INFO_PARAM_FLAG_CODING:
-                    try {
-                        value = String.valueOf(raster.getProduct().getBand(raster.getName()).getFlagCoding());
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_VALID_PIXEL_EXPRESSION:
-                    value = raster.getValidPixelExpression();
-                    break;
-
-                case INFO_PARAM_NO_DATA_VALUE:
-                    value = String.valueOf(raster.getNoDataValue());
-                    break;
-
-                case INFO_PARAM_IS_NO_DATA_VALUE_SET:
-                    value = String.valueOf(raster.isNoDataValueSet());
-                    break;
-
-                case INFO_PARAM_IS_NO_DATA_VALUE_USED:
-                    value = String.valueOf(raster.isNoDataValueUsed());
-                    break;
-
-                case INFO_PARAM_IS_SCALING_APPLIED:
-                    value = String.valueOf(raster.isScalingApplied());
-                    break;
-
-                case INFO_PARAM_SCALING_FACTOR:
-                    value = String.valueOf(raster.getScalingFactor());
-                    break;
-
-                case INFO_PARAM_SCALING_OFFSET:
-                    value = String.valueOf(raster.getScalingOffset());
-                    break;
-
-                case INFO_PARAM_IS_LOG_SCALED:
-                    value = String.valueOf(raster.isLog10Scaled());
-                    break;
-
-                case INFO_PARAM_IS_PALETTE_LOG_SCALED:
-                    try {
-                        value = String.valueOf(raster.getImageInfo().getColorPaletteDef().isLogScaled());
-                    } catch (Exception e) {
-                    }
-                    break;
-
-                case INFO_PARAM_NODE_DISPLAY_NAMES:
-                    try {
-                        value = "";
-                        String[] nodeDisplayNames = raster.getOverlayMaskGroup().getNodeDisplayNames();
-                        for (String nodeDisplayName : nodeDisplayNames) {
-                            if (value.length() == 0) {
-                                value = nodeDisplayName;
-                            } else {
-                                value = value + ", " + nodeDisplayName;
-                            }
-                        }
-                    } catch (Exception e) {
-                    }
-
-                    break;
-
-                case INFO_PARAM_NODE_NAMES:
-                    try {
-                        value = "";
-                        String[] getNodeNames = raster.getOverlayMaskGroup().getNodeNames();
-                        for (String getNodeName : getNodeNames) {
-                            if (value.length() == 0) {
-                                value = getNodeName;
-                            } else {
-                                value = value + ", " + getNodeName;
-                            }
-                        }
-                    } catch (Exception e) {
-                    }
-                    break;
-
-
-                case "MY_INFO":
-                    value = getMyInfo();
-                    break;
-
-                case "MY_INFO1":
-                    value = getMyInfo1();
-                    break;
-
-                case "MY_INFO2":
-                    value = getMyInfo2();
-                    break;
-
-                case "MY_INFO3":
-                    value = getMyInfo3();
-                    break;
-
-                case "MY_INFO4":
-                    value = getMyInfo4();
-                    break;
-            }
-
-
-        }
-
-
-        return value;
-    }
 
     private void getUserValues() {
 
@@ -1373,23 +825,13 @@ public class MetaDataLayer extends Layer {
 
     private ArrayList<String> getHeaderFooterLinesArray(String text) {
         ArrayList<String> lineArrayList = new ArrayList<String>();
+        String delimiter = getMarginMetadataDelimiter();
 
         if (text != null && text.length() > 0) {
             String[] linesArray = text.split("(\\n|<br>)");
             for (String currentLine : linesArray) {
                 if (currentLine != null && currentLine.length() > 0) {
-                    currentLine = replaceStringVariables(currentLine, false, "<I=");
-                    currentLine = replaceStringVariables(currentLine, false, "<INFO=");
-                    currentLine = replaceStringVariables(currentLine, false, "<FILE_INFO=");
-                    currentLine = replaceStringVariables(currentLine, false, "<BAND_INFO=");
-                    currentLine = replaceStringVariables(currentLine, false, "<M=");
-                    currentLine = replaceStringVariables(currentLine, false, "<MG=");
-                    currentLine = replaceStringVariables(currentLine, false, "<G=");
-                    currentLine = replaceStringVariables(currentLine, false, "<META=");
-                    currentLine = replaceStringVariables(currentLine, false, "<FILE_META=");
-                    currentLine = replaceStringVariables(currentLine, false, "<MB=");
-                    currentLine = replaceStringVariables(currentLine, false, "<B=");
-                    currentLine = replaceStringVariables(currentLine, false, "<BAND_META=");
+                    currentLine = MetadataUtils.getReplacedStringAllVariables(currentLine, raster, delimiter, MetadataUtils.INFO_PARAM_WAVE);
                     lineArrayList.add(currentLine);
                 }
             }
@@ -1397,6 +839,9 @@ public class MetaDataLayer extends Layer {
 
         return lineArrayList;
     }
+
+
+
 
 
     private boolean displayAllInfo() {
