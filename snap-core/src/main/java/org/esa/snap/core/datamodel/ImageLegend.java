@@ -1761,6 +1761,10 @@ public class ImageLegend {
         float angle = raster.getProduct().getBand(raster.getName()).getAngularValue();
         boolean allowWavelengthZero = true;
 
+
+
+
+
 //        titleString = ColorSchemeInfo.getColorBarTitle(titleString, bandname, description, wavelength, angle, units, allowWavelengthZero);
         titleString = MetadataUtils.getReplacedStringAllVariables(titleString, raster, "", MetadataUtils.INFO_PARAM_WAVE);
         drawHeaderSubMethod(g2d, titleString, draw, isConvertCaret());
