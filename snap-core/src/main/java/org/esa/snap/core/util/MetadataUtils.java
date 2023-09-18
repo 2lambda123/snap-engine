@@ -330,16 +330,16 @@ public class MetadataUtils {
 
             if (currentLine != null) {
                 for (String infoKey : INFO_PARAMS) {
-//                    String enclosedInfoKey;
-                    String enclosedInfoKey = "{" + infoKey + "}";
-                    currentLine = currentLine.replace(enclosedInfoKey, getDerivedMeta(infoKey.toUpperCase(), raster, percentD_ReplacementKey));
+                    String enclosedInfoKey;
+//                    String enclosedInfoKey = "{" + infoKey + "}";
+//                    currentLine = currentLine.replace(enclosedInfoKey, getDerivedMeta(infoKey.toUpperCase(), raster, percentD_ReplacementKey));
 
                     enclosedInfoKey = "<" + infoKey + ">";
                     currentLine = currentLine.replace(enclosedInfoKey, getDerivedMeta(infoKey.toUpperCase(), raster, percentD_ReplacementKey));
 
 
-                    enclosedInfoKey = "[" + infoKey + "]";
-                    currentLine = currentLine.replace(enclosedInfoKey, getDerivedMeta(infoKey.toUpperCase(), raster, percentD_ReplacementKey));
+//                    enclosedInfoKey = "[" + infoKey + "]";
+//                    currentLine = currentLine.replace(enclosedInfoKey, getDerivedMeta(infoKey.toUpperCase(), raster, percentD_ReplacementKey));
 
 
                     enclosedInfoKey = "&lt;" + infoKey + "&gt;";
@@ -362,14 +362,14 @@ public class MetadataUtils {
             String replaceKeyEnd = ">";
             replacedText = MetadataUtils.getReplacedStringSingleVariable(replacedText, false, replaceKeyStart, replaceKey, replaceKeyEnd, raster, delimiter, "");
 
-            replaceKeyStart = "{";
-            replaceKeyEnd = "}";
-            replacedText = MetadataUtils.getReplacedStringSingleVariable(replacedText, false, replaceKeyStart, replaceKey, replaceKeyEnd, raster, delimiter, "");
+//            replaceKeyStart = "{";
+//            replaceKeyEnd = "}";
+//            replacedText = MetadataUtils.getReplacedStringSingleVariable(replacedText, false, replaceKeyStart, replaceKey, replaceKeyEnd, raster, delimiter, "");
 
 
-            replaceKeyStart = "[";
-            replaceKeyEnd = "]";
-            replacedText = MetadataUtils.getReplacedStringSingleVariable(replacedText, false, replaceKeyStart, replaceKey, replaceKeyEnd, raster, delimiter, "");
+//            replaceKeyStart = "[";
+//            replaceKeyEnd = "]";
+//            replacedText = MetadataUtils.getReplacedStringSingleVariable(replacedText, false, replaceKeyStart, replaceKey, replaceKeyEnd, raster, delimiter, "");
 
 
             replaceKeyStart = "&lt;";
@@ -447,15 +447,12 @@ public class MetadataUtils {
                     inputString = inputString.replace(replaceKeyStart+"INFO=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"Info=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"info=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"PROD_ATTR=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"Prod_Attr=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"prod_attr=", replaceGoal);
                     break;
 
                 case "GLOBAL_ATTRIBUTE=":
-                    inputString = inputString.replace(replaceKeyStart+"META=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"Meta=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"meta=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"META=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"Meta=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"meta=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"Global_Attribute=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"global_attribute=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"GLOB_ATTR=", replaceGoal);
@@ -464,9 +461,9 @@ public class MetadataUtils {
                     break;
 
                 case "BAND_ATTRIBUTE=":
-                    inputString = inputString.replace(replaceKeyStart+"BAND_META=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"Band_Meta=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"band_meta=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"BAND_META=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"Band_Meta=", replaceGoal);
+//                    inputString = inputString.replace(replaceKeyStart+"band_meta=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"Band_Attribute=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"band_attribute=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"BAND_ATTR=", replaceGoal);

@@ -217,7 +217,12 @@ public class MetaDataLayerType extends LayerType {
     public static final Class PROPERTY_MARGIN_BAND_METADATA_SHOW_ALL_TYPE = Boolean.class;
 
 
-
+    public static final String PROPERTY_MARGIN_CONVERT_CARET_KEY = PROPERTY_MARGIN_ROOT_KEY + ".convert.caret";
+    public static final String PROPERTY_MARGIN_CONVERT_CARET_LABEL = "Convert Margin Carets to Superscripts";
+    public static final String PROPERTY_MARGIN_CONVERT_CARET_TOOLTIP = "Convert any caret (^) symbols found in the text into a formatted superscript";
+    public static final String PROPERTY_MARGIN_CONVERT_CARET_ALIAS = PROPERTY_MARGIN_ROOT_ALIAS + "ConvertCaret";
+    public static final boolean PROPERTY_MARGIN_CONVERT_CARET_DEFAULT = true;
+    public static final Class PROPERTY_MARGIN_CONVERT_CARET_TYPE = Boolean.class;
 
 
 
@@ -322,6 +327,17 @@ public class MetaDataLayerType extends LayerType {
     public static final String PROPERTY_HEADER_TEXTFIELD4_ALIAS = PROPERTY_HEADER_CONTENTS_ROOT_ALIAS + "Textfield4";
     public static final String PROPERTY_HEADER_TEXTFIELD4_DEFAULT = "";
     public static final Class PROPERTY_HEADER_TEXTFIELD4_TYPE = String.class;
+
+
+
+
+    public static final String PROPERTY_HEADER_CONVERT_CARET_KEY = PROPERTY_HEADER_CONTENTS_ROOT_KEY + ".convert.caret";
+    public static final String PROPERTY_HEADER_CONVERT_CARET_LABEL = "Convert Header Carets to Superscripts";
+    public static final String PROPERTY_HEADER_CONVERT_CARET_TOOLTIP = "Convert any caret (^) symbols found in the text into a formatted superscript";
+    public static final String PROPERTY_HEADER_CONVERT_CARET_ALIAS = PROPERTY_HEADER_CONTENTS_ROOT_ALIAS + "ConvertCaret";
+    public static final boolean PROPERTY_HEADER_CONVERT_CARET_DEFAULT = true;
+    public static final Class PROPERTY_HEADER_CONVERT_CARET_TYPE = Boolean.class;
+
 
 
 
@@ -452,6 +468,16 @@ public class MetaDataLayerType extends LayerType {
     public static final String PROPERTY_FOOTER2_TEXTFIELD4_ALIAS = PROPERTY_FOOTER2_ROOT_ALIAS + "Textfield4";
     public static final String PROPERTY_FOOTER2_TEXTFIELD4_DEFAULT = "";
     public static final Class PROPERTY_FOOTER2_TEXTFIELD4_TYPE = String.class;
+
+
+
+    public static final String PROPERTY_FOOTER_CONVERT_CARET_KEY = PROPERTY_FOOTER2_ROOT_KEY + ".convert.caret";
+    public static final String PROPERTY_FOOTER_CONVERT_CARET_LABEL = "Convert Footer Carets to Superscripts";
+    public static final String PROPERTY_FOOTER_CONVERT_CARET_TOOLTIP = "Convert any caret (^) symbols found in the text into a formatted superscript";
+    public static final String PROPERTY_FOOTER_CONVERT_CARET_ALIAS = PROPERTY_FOOTER2_ROOT_ALIAS + "ConvertCaret";
+    public static final boolean PROPERTY_FOOTER_CONVERT_CARET_DEFAULT = true;
+    public static final Class PROPERTY_FOOTER_CONVERT_CARET_TYPE = Boolean.class;
+
 
 
     public static final String PROPERTY_FOOTER2_MY_INFO_SHOW_KEY = PROPERTY_FOOTER2_ROOT_KEY + ".show.my.info";
@@ -661,6 +687,17 @@ public class MetaDataLayerType extends LayerType {
         displayAllBandMetadataModel.getDescriptor().setAlias(PROPERTY_MARGIN_BAND_METADATA_SHOW_ALL_ALIAS);
         vc.addProperty(displayAllBandMetadataModel);
 
+        final Property convertCaretHeaderModel = Property.create(PROPERTY_HEADER_CONVERT_CARET_KEY, PROPERTY_HEADER_CONVERT_CARET_TYPE, true, true);
+        convertCaretHeaderModel.getDescriptor().setAlias(PROPERTY_HEADER_CONVERT_CARET_ALIAS);
+        vc.addProperty(convertCaretHeaderModel);
+
+        final Property convertCaretFooterModel = Property.create(PROPERTY_FOOTER_CONVERT_CARET_KEY, PROPERTY_FOOTER_CONVERT_CARET_TYPE, true, true);
+        convertCaretFooterModel.getDescriptor().setAlias(PROPERTY_FOOTER_CONVERT_CARET_ALIAS);
+        vc.addProperty(convertCaretFooterModel);
+
+        final Property convertCaretMarginModel = Property.create(PROPERTY_MARGIN_CONVERT_CARET_KEY, PROPERTY_MARGIN_CONVERT_CARET_TYPE, true, true);
+        convertCaretMarginModel.getDescriptor().setAlias(PROPERTY_MARGIN_CONVERT_CARET_ALIAS);
+        vc.addProperty(convertCaretMarginModel);
 
         final Property footerModel = Property.create(PROPERTY_MARGIN_TEXTFIELD_KEY, PROPERTY_MARGIN_TEXTFIELD_TYPE, true, true);
         footerModel.getDescriptor().setAlias(PROPERTY_MARGIN_TEXTFIELD_ALIAS);
