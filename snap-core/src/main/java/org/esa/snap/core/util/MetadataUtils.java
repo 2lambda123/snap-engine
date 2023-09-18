@@ -324,7 +324,7 @@ public class MetadataUtils {
         String currentLine = inputText;
 
         try {
-            currentLine = MetadataUtils.getReplacedStringSingleVariableWrapper(currentLine, false, "INFO_ATTRIBUTE=", raster, delimiter, "");
+            currentLine = MetadataUtils.getReplacedStringSingleVariableWrapper(currentLine, false, "INFO=", raster, delimiter, "");
             currentLine = MetadataUtils.getReplacedStringSingleVariableWrapper(currentLine, false, "GLOBAL_ATTRIBUTE=", raster, delimiter, "");
             currentLine = MetadataUtils.getReplacedStringSingleVariableWrapper(currentLine, false, "BAND_ATTRIBUTE=", raster, delimiter, "");
 
@@ -443,15 +443,10 @@ public class MetadataUtils {
             String replaceGoal = replaceKeyStart+replaceKey;
 
             switch (replaceKey) {
-                case "INFO_ATTRIBUTE=":
+                case "INFO=":
                     inputString = inputString.replace(replaceKeyStart+"INFO=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"Info=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"info=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"Info_Attribute=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"info_attribute=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"INFO_ATTR=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"Info_Attr=", replaceGoal);
-                    inputString = inputString.replace(replaceKeyStart+"info_attr=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"PROD_ATTR=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"Prod_Attr=", replaceGoal);
                     inputString = inputString.replace(replaceKeyStart+"prod_attr=", replaceGoal);
@@ -533,7 +528,7 @@ public class MetadataUtils {
 
 
                     switch (replaceKey) {
-                        case "INFO_ATTRIBUTE=":
+                        case "INFO=":
                             value = getDerivedMeta(metaId.toUpperCase(), raster, percentD_ReplacementKey);
                             break;
 
