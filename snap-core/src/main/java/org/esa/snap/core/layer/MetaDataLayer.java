@@ -225,7 +225,7 @@ public class MetaDataLayer extends Layer {
                 marginList.add("");
             }
             if (marginInfoCombinedArrayList.size() > 0) {
-                marginList.add("File-Band Info:");
+                marginList.add("File-Band (Properties):");
                 addFromMetadataList(marginInfoCombinedArrayList, marginList, false, false);
                 marginList.add("");
             }
