@@ -227,6 +227,9 @@ public class MetaDataLayer extends Layer {
 
             }
 
+//            if (marginList != null) {
+//                marginList.add("");
+//            }
 
             if (marginInfoCombinedArrayList.size() > 0) {
                 if (getMarginPropertyHeading() != null && getMarginPropertyHeading().length() > 0) {
