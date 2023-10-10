@@ -41,39 +41,23 @@ public class MetadataUtils {
     private static final String INFO_PARAM_BAND_DESCRIPTION = "BAND_DESCRIPTION";
     private static final String INFO_PARAM_FILE_LOCATION = "FILE_LOCATION";
     private static final String INFO_PARAM_PRODUCT_TYPE = "PRODUCT_TYPE";
-    private static final String INFO_PARAM_SCENE_DATE = "SCENE_DATE";
-    private static final String INFO_PARAM_SCENE_DATE2 = "SCENE_DATE2";
-    private static final String INFO_PARAM_SCENE_DATE3 = "SCENE_DATE3";
-    private static final String INFO_PARAM_SCENE_DATE4 = "SCENE_DATE4";
-    private static final String INFO_PARAM_SCENE_START_DATE = "SCENE_START_DATE";
-    private static final String INFO_PARAM_SCENE_START_DATE1 = "SCENE_START_DATE1";
-    private static final String INFO_PARAM_SCENE_START_DATE2 = "SCENE_START_DATE2";
-    private static final String INFO_PARAM_SCENE_START_DATE3 = "SCENE_START_DATE3";
-    private static final String INFO_PARAM_SCENE_START_DATE4 = "SCENE_START_DATE4";
-//    private static final String INFO_PARAM_SCENE_DATE_LONG = "SCENE_DATE_LONG";
-//    private static final String INFO_PARAM_SCENE_DATETIME = "SCENE_DATETIME";
-//    private static final String INFO_PARAM_SCENE_DATETIME_SHORT = "SCENE_DATETIME_SHORT_HHMM";
-//    private static final String INFO_PARAM_SCENE_DATETIME_SHORT_SEC = "SCENE_DATETIME_SHORT_HHMMSS";
-//    //    private static final String INFO_PARAM_SCENE_DATETIME_LONG = "SCENE_DATETIME_LONG_HHMM";
-////    private static final String INFO_PARAM_SCENE_DATETIME_LONG_SEC = "SCENE_DATETIME_LONG_HHMMSS";
-//    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT = "SCENE_START_DATETIME_SHORT_HHMM";
-//    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT_SEC = "SCENE_START_DATETIME_SHORT_HHMMSS";
-//    //    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG = "SCENE_START_DATETIME_LONG_HHMM";
-////    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG_SEC = "SCENE_START_DATETIME_LONG_HHMMSS";
-//    private static final String INFO_PARAM_SCENE_START_DATETIME = "SCENE_START_DATETIME";
-//    private static final String INFO_PARAM_SCENE_START_DATE = "SCENE_START_DATE";
-//    private static final String INFO_PARAM_SCENE_START_DATE_SHORT = "SCENE_START_DATE_SHORT";
-//    private static final String INFO_PARAM_SCENE_START_DATE_LONG = "SCENE_START_DATE_LONG";
-//    private static final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
-//    private static final String INFO_PARAM_SCENE_START_TIME_HHMM = "SCENE_START_TIME_HHMM";
-//    private static final String INFO_PARAM_SCENE_START_TIME_HHMMSS = "SCENE_START_TIME_HHMMSS";
-//    private static final String INFO_PARAM_SCENE_END_DATETIME = "SCENE_END_DATETIME";
-//    private static final String INFO_PARAM_SCENE_END_DATE = "SCENE_END_DATE";
-//    private static final String INFO_PARAM_SCENE_END_DATE_SHORT = "SCENE_END_DATE_SHORT";
-//    private static final String INFO_PARAM_SCENE_END_DATE_LONG = "SCENE_END_DATE_LONG";
-//    private static final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
-//    private static final String INFO_PARAM_SCENE_END_TIME_HHMM = "SCENE_END_TIME_HHMM";
-//    private static final String INFO_PARAM_SCENE_END_TIME_HHMMSS = "SCENE_END_TIME_HHMMSS";
+    private static final String INFO_PARAM_SCENE_DATE_MONTHDDYYY = "SCENE_DATE_MONTHDDYYY";
+    private static final String INFO_PARAM_SCENE_DATE_MMDDYYY = "SCENE_DATE_MMDDYYY";
+    private static final String INFO_PARAM_SCENE_DATE_DDMONTHYYYY = "SCENE_DATE_DDMONTHYYYY";
+    private static final String INFO_PARAM_SCENE_DATE_DDMMMYYYY = "SCENE_DATE_DDMMMYYYY";
+
+    private static final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
+    private static final String INFO_PARAM_SCENE_START_TIME_MONTHDDYYY = "SCENE_START_TIME_MONTHDDYYY";
+    private static final String INFO_PARAM_SCENE_START_TIME_DDMONTHYYYY = "SCENE_START_TIME_DDMONTHYYYY";
+    private static final String INFO_PARAM_SCENE_START_TIME_MMMDDYYY = "SCENE_START_TIME_MMMDDYYY";
+    private static final String INFO_PARAM_SCENE_START_TIME_DDMMMYYYY = "SCENE_START_TIME_DDMMMYYYY";
+
+    private static final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
+    private static final String INFO_PARAM_SCENE_END_TIME_MONTHDDYYY = "SCENE_END_TIME_MONTHDDYYY";
+    private static final String INFO_PARAM_SCENE_END_TIME_DDMONTHYYYY = "SCENE_END_TIME_DDMONTHYYYY";
+    private static final String INFO_PARAM_SCENE_END_TIME_MMMDDYYY = "SCENE_END_TIME_MMMDDYYY";
+    private static final String INFO_PARAM_SCENE_END_TIME_DDMMMYYYY = "SCENE_END_TIME_DDMMMYYYY";
+    
     private static final String INFO_PARAM_SCENE_HEIGHT = "SCENE_HEIGHT";
     private static final String INFO_PARAM_SCENE_WIDTH = "SCENE_WIDTH";
     private static final String INFO_PARAM_SCENE_SIZE = "SCENE_SIZE";
@@ -112,16 +96,21 @@ public class MetadataUtils {
             INFO_PARAM_FILE_LOCATION,
             INFO_PARAM_PRODUCT_TYPE,
 
-            INFO_PARAM_SCENE_DATE,
-            INFO_PARAM_SCENE_DATE2,
-            INFO_PARAM_SCENE_DATE3,
-            INFO_PARAM_SCENE_DATE4,
-            INFO_PARAM_SCENE_START_DATE,
-            INFO_PARAM_SCENE_START_DATE1,
-            INFO_PARAM_SCENE_START_DATE2,
-            INFO_PARAM_SCENE_START_DATE3,
-            INFO_PARAM_SCENE_START_DATE4,
-
+            INFO_PARAM_SCENE_DATE_MONTHDDYYY,
+            INFO_PARAM_SCENE_DATE_MMDDYYY,
+            INFO_PARAM_SCENE_DATE_DDMONTHYYYY,
+            INFO_PARAM_SCENE_DATE_DDMMMYYYY,
+            INFO_PARAM_SCENE_START_TIME,
+            INFO_PARAM_SCENE_START_TIME_MONTHDDYYY,
+            INFO_PARAM_SCENE_START_TIME_DDMONTHYYYY,
+            INFO_PARAM_SCENE_START_TIME_MMMDDYYY,
+            INFO_PARAM_SCENE_START_TIME_DDMMMYYYY,
+            INFO_PARAM_SCENE_END_TIME,
+            INFO_PARAM_SCENE_END_TIME_MONTHDDYYY,
+            INFO_PARAM_SCENE_END_TIME_DDMONTHYYYY,
+            INFO_PARAM_SCENE_END_TIME_MMMDDYYY,
+            INFO_PARAM_SCENE_END_TIME_DDMMMYYYY,
+            
             INFO_PARAM_SCENE_HEIGHT,
             INFO_PARAM_SCENE_WIDTH,
             INFO_PARAM_SCENE_SIZE,
@@ -174,42 +163,63 @@ public class MetadataUtils {
                     }
                     break;
 
-                case INFO_PARAM_SCENE_DATE:
+                case INFO_PARAM_SCENE_DATE_MONTHDDYYY:
                     value = getSceneDate1(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_DATE2:
+                case INFO_PARAM_SCENE_DATE_MMDDYYY:
                     value = getSceneDate1(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_DATE3:
+                case INFO_PARAM_SCENE_DATE_DDMONTHYYYY:
                     value = getSceneDate1(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_DATE4:
+                case INFO_PARAM_SCENE_DATE_DDMMMYYYY:
                     value = getSceneDate1(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE:
+                case INFO_PARAM_SCENE_START_TIME:
                     value = getSceneStartDateTime(raster, null, null);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE1:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.NONE);
-                    break;
-
-                case INFO_PARAM_SCENE_START_DATE2:
+                case INFO_PARAM_SCENE_START_TIME_MONTHDDYYY:
                     value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE3:
+                case INFO_PARAM_SCENE_START_TIME_DDMONTHYYYY:
+                    value = getSceneStartDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_START_TIME_MMMDDYYY:
                     value = getSceneStartDateTime(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE4:
+                case INFO_PARAM_SCENE_START_TIME_DDMMMYYYY:
                     value = getSceneStartDateTime(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
+
+
+                case INFO_PARAM_SCENE_END_TIME:
+                    value = getSceneEndDateTime(raster, null, null);
+                    break;
+
+                case INFO_PARAM_SCENE_END_TIME_MONTHDDYYY:
+                    value = getSceneEndDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_END_TIME_DDMONTHYYYY:
+                    value = getSceneEndDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_END_TIME_MMMDDYYY:
+                    value = getSceneEndDateTime(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_END_TIME_DDMMMYYYY:
+                    value = getSceneEndDateTime(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
 
 
 
