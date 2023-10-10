@@ -42,31 +42,38 @@ public class MetadataUtils {
     private static final String INFO_PARAM_FILE_LOCATION = "FILE_LOCATION";
     private static final String INFO_PARAM_PRODUCT_TYPE = "PRODUCT_TYPE";
     private static final String INFO_PARAM_SCENE_DATE = "SCENE_DATE";
-    private static final String INFO_PARAM_SCENE_DATE_SHORT = "SCENE_DATE_SHORT";
-    private static final String INFO_PARAM_SCENE_DATE_LONG = "SCENE_DATE_LONG";
-    private static final String INFO_PARAM_SCENE_DATETIME = "SCENE_DATETIME";
-    private static final String INFO_PARAM_SCENE_DATETIME_SHORT = "SCENE_DATETIME_SHORT_HHMM";
-    private static final String INFO_PARAM_SCENE_DATETIME_SHORT_SEC = "SCENE_DATETIME_SHORT_HHMMSS";
-    //    private static final String INFO_PARAM_SCENE_DATETIME_LONG = "SCENE_DATETIME_LONG_HHMM";
-//    private static final String INFO_PARAM_SCENE_DATETIME_LONG_SEC = "SCENE_DATETIME_LONG_HHMMSS";
-    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT = "SCENE_START_DATETIME_SHORT_HHMM";
-    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT_SEC = "SCENE_START_DATETIME_SHORT_HHMMSS";
-    //    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG = "SCENE_START_DATETIME_LONG_HHMM";
-//    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG_SEC = "SCENE_START_DATETIME_LONG_HHMMSS";
-    private static final String INFO_PARAM_SCENE_START_DATETIME = "SCENE_START_DATETIME";
+    private static final String INFO_PARAM_SCENE_DATE2 = "SCENE_DATE2";
+    private static final String INFO_PARAM_SCENE_DATE3 = "SCENE_DATE3";
+    private static final String INFO_PARAM_SCENE_DATE4 = "SCENE_DATE4";
     private static final String INFO_PARAM_SCENE_START_DATE = "SCENE_START_DATE";
-    private static final String INFO_PARAM_SCENE_START_DATE_SHORT = "SCENE_START_DATE_SHORT";
-    private static final String INFO_PARAM_SCENE_START_DATE_LONG = "SCENE_START_DATE_LONG";
-    private static final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
-    private static final String INFO_PARAM_SCENE_START_TIME_HHMM = "SCENE_START_TIME_HHMM";
-    private static final String INFO_PARAM_SCENE_START_TIME_HHMMSS = "SCENE_START_TIME_HHMMSS";
-    private static final String INFO_PARAM_SCENE_END_DATETIME = "SCENE_END_DATETIME";
-    private static final String INFO_PARAM_SCENE_END_DATE = "SCENE_END_DATE";
-    private static final String INFO_PARAM_SCENE_END_DATE_SHORT = "SCENE_END_DATE_SHORT";
-    private static final String INFO_PARAM_SCENE_END_DATE_LONG = "SCENE_END_DATE_LONG";
-    private static final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
-    private static final String INFO_PARAM_SCENE_END_TIME_HHMM = "SCENE_END_TIME_HHMM";
-    private static final String INFO_PARAM_SCENE_END_TIME_HHMMSS = "SCENE_END_TIME_HHMMSS";
+    private static final String INFO_PARAM_SCENE_START_DATE1 = "SCENE_START_DATE1";
+    private static final String INFO_PARAM_SCENE_START_DATE2 = "SCENE_START_DATE2";
+    private static final String INFO_PARAM_SCENE_START_DATE3 = "SCENE_START_DATE3";
+    private static final String INFO_PARAM_SCENE_START_DATE4 = "SCENE_START_DATE4";
+//    private static final String INFO_PARAM_SCENE_DATE_LONG = "SCENE_DATE_LONG";
+//    private static final String INFO_PARAM_SCENE_DATETIME = "SCENE_DATETIME";
+//    private static final String INFO_PARAM_SCENE_DATETIME_SHORT = "SCENE_DATETIME_SHORT_HHMM";
+//    private static final String INFO_PARAM_SCENE_DATETIME_SHORT_SEC = "SCENE_DATETIME_SHORT_HHMMSS";
+//    //    private static final String INFO_PARAM_SCENE_DATETIME_LONG = "SCENE_DATETIME_LONG_HHMM";
+////    private static final String INFO_PARAM_SCENE_DATETIME_LONG_SEC = "SCENE_DATETIME_LONG_HHMMSS";
+//    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT = "SCENE_START_DATETIME_SHORT_HHMM";
+//    private static final String INFO_PARAM_SCENE_START_DATETIME_SHORT_SEC = "SCENE_START_DATETIME_SHORT_HHMMSS";
+//    //    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG = "SCENE_START_DATETIME_LONG_HHMM";
+////    private static final String INFO_PARAM_SCENE_START_DATETIME_LONG_SEC = "SCENE_START_DATETIME_LONG_HHMMSS";
+//    private static final String INFO_PARAM_SCENE_START_DATETIME = "SCENE_START_DATETIME";
+//    private static final String INFO_PARAM_SCENE_START_DATE = "SCENE_START_DATE";
+//    private static final String INFO_PARAM_SCENE_START_DATE_SHORT = "SCENE_START_DATE_SHORT";
+//    private static final String INFO_PARAM_SCENE_START_DATE_LONG = "SCENE_START_DATE_LONG";
+//    private static final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
+//    private static final String INFO_PARAM_SCENE_START_TIME_HHMM = "SCENE_START_TIME_HHMM";
+//    private static final String INFO_PARAM_SCENE_START_TIME_HHMMSS = "SCENE_START_TIME_HHMMSS";
+//    private static final String INFO_PARAM_SCENE_END_DATETIME = "SCENE_END_DATETIME";
+//    private static final String INFO_PARAM_SCENE_END_DATE = "SCENE_END_DATE";
+//    private static final String INFO_PARAM_SCENE_END_DATE_SHORT = "SCENE_END_DATE_SHORT";
+//    private static final String INFO_PARAM_SCENE_END_DATE_LONG = "SCENE_END_DATE_LONG";
+//    private static final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
+//    private static final String INFO_PARAM_SCENE_END_TIME_HHMM = "SCENE_END_TIME_HHMM";
+//    private static final String INFO_PARAM_SCENE_END_TIME_HHMMSS = "SCENE_END_TIME_HHMMSS";
     private static final String INFO_PARAM_SCENE_HEIGHT = "SCENE_HEIGHT";
     private static final String INFO_PARAM_SCENE_WIDTH = "SCENE_WIDTH";
     private static final String INFO_PARAM_SCENE_SIZE = "SCENE_SIZE";
@@ -104,32 +111,17 @@ public class MetadataUtils {
             INFO_PARAM_BAND_DESCRIPTION,
             INFO_PARAM_FILE_LOCATION,
             INFO_PARAM_PRODUCT_TYPE,
+
             INFO_PARAM_SCENE_DATE,
-            INFO_PARAM_SCENE_DATE_SHORT,
-            INFO_PARAM_SCENE_DATE_LONG,
-            INFO_PARAM_SCENE_DATETIME,
-            INFO_PARAM_SCENE_DATETIME_SHORT,
-            INFO_PARAM_SCENE_DATETIME_SHORT_SEC,
-//            INFO_PARAM_SCENE_DATETIME_LONG,
-//            INFO_PARAM_SCENE_DATETIME_LONG_SEC,
-            INFO_PARAM_SCENE_START_DATETIME_SHORT,
-            INFO_PARAM_SCENE_START_DATETIME_SHORT_SEC,
-//            INFO_PARAM_SCENE_START_DATETIME_LONG,
-//            INFO_PARAM_SCENE_START_DATETIME_LONG_SEC,
-            INFO_PARAM_SCENE_START_DATETIME,
+            INFO_PARAM_SCENE_DATE2,
+            INFO_PARAM_SCENE_DATE3,
+            INFO_PARAM_SCENE_DATE4,
             INFO_PARAM_SCENE_START_DATE,
-            INFO_PARAM_SCENE_START_DATE_SHORT,
-            INFO_PARAM_SCENE_START_DATE_LONG,
-            INFO_PARAM_SCENE_START_TIME,
-            INFO_PARAM_SCENE_START_TIME_HHMM,
-            INFO_PARAM_SCENE_START_TIME_HHMMSS,
-            INFO_PARAM_SCENE_END_DATETIME,
-            INFO_PARAM_SCENE_END_DATE,
-            INFO_PARAM_SCENE_END_DATE_SHORT,
-            INFO_PARAM_SCENE_END_DATE_LONG,
-            INFO_PARAM_SCENE_END_TIME,
-            INFO_PARAM_SCENE_END_TIME_HHMM,
-            INFO_PARAM_SCENE_END_TIME_HHMMSS,
+            INFO_PARAM_SCENE_START_DATE1,
+            INFO_PARAM_SCENE_START_DATE2,
+            INFO_PARAM_SCENE_START_DATE3,
+            INFO_PARAM_SCENE_START_DATE4,
+
             INFO_PARAM_SCENE_HEIGHT,
             INFO_PARAM_SCENE_WIDTH,
             INFO_PARAM_SCENE_SIZE,
@@ -183,103 +175,42 @@ public class MetadataUtils {
                     break;
 
                 case INFO_PARAM_SCENE_DATE:
+                    value = getSceneDate1(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_DATE2:
+                    value = getSceneDate1(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+                case INFO_PARAM_SCENE_DATE3:
                     value = getSceneDate1(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
-//
-//                case INFO_PARAM_SCENE_DATE_SHORT:
-//                    value = getSceneDate(raster, DATE_FORMAT.CAMEL_SHORT);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_DATE_LONG:
-//                    value = getSceneDate(raster, DATE_FORMAT.CAMEL_LONG);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_DATETIME:
-//                    value = getSceneDateTime(raster, null, null, false);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_DATETIME_SHORT:
-//                    value = getSceneDateTime(raster, DATE_FORMAT.CAMEL_SHORT, TIME_FORMAT.HH_MM, false);
-//                    break;
-//
-//
-//                case INFO_PARAM_SCENE_DATETIME_SHORT_SEC:
-//                    value = getSceneDateTime(raster, DATE_FORMAT.CAMEL_SHORT, TIME_FORMAT.HH_MM_SS, false);
-//                    break;
-//
-//
-//
-//                case INFO_PARAM_SCENE_START_DATETIME_SHORT:
-//                    value = getSceneDateTime(raster, DATE_FORMAT.CAMEL_SHORT, TIME_FORMAT.HH_MM, true);
-//                    break;
-//
-//
-//
-//                case INFO_PARAM_SCENE_START_DATETIME_SHORT_SEC:
-//                    value = getSceneDateTime(raster, DATE_FORMAT.CAMEL_SHORT, TIME_FORMAT.HH_MM_SS, true);
-//                    break;
-//
-//
-//                case INFO_PARAM_SCENE_START_DATETIME:
-//                    value = getSceneStartDateTime(raster);
-//                    break;
+
+                case INFO_PARAM_SCENE_DATE4:
+                    value = getSceneDate1(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
 
                 case INFO_PARAM_SCENE_START_DATE:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_YYYY, TIME_FORMAT.NONE);
+                    value = getSceneStartDateTime(raster, null, null);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE_SHORT:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_YYYY, TIME_FORMAT.NONE);
+                case INFO_PARAM_SCENE_START_DATE1:
+                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.NONE);
                     break;
 
-                case INFO_PARAM_SCENE_START_DATE_LONG:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_YYYY, TIME_FORMAT.NONE);
+                case INFO_PARAM_SCENE_START_DATE2:
+                    value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_TIME:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.NONE, TIME_FORMAT.HH_MM_SS_ms);
+                case INFO_PARAM_SCENE_START_DATE3:
+                    value = getSceneStartDateTime(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_TIME_HHMMSS:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.NONE, TIME_FORMAT.HH_MM_SS);
+                case INFO_PARAM_SCENE_START_DATE4:
+                    value = getSceneStartDateTime(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_TIME_HHMM:
-                    value = getSceneStartDateTime(raster, DATE_FORMAT.NONE, TIME_FORMAT.HH_MM);
-                    break;
-//
-//                case INFO_PARAM_SCENE_END_DATETIME:
-//                    value = getSceneEndDateTime(raster);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_END_DATE:
-//                    value = getSceneEndDate(raster, null);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_END_DATE_SHORT:
-//                    value = getSceneEndDate(raster, DATE_FORMAT.CAMEL_SHORT);
-//                    break;
-//
-//
-//                case INFO_PARAM_SCENE_END_DATE_LONG:
-//                    value = getSceneEndDate(raster, DATE_FORMAT.CAMEL_LONG);
-//                    break;
-//
-//
-//                case INFO_PARAM_SCENE_END_TIME:
-//                    value = getSceneEndTime(raster, null);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_END_TIME_HHMM:
-//                    value = getSceneEndTime(raster, TIME_FORMAT.HH_MM);
-//                    break;
-//
-//                case INFO_PARAM_SCENE_END_TIME_HHMMSS:
-//                    value = getSceneEndTime(raster, TIME_FORMAT.HH_MM_SS);
-//                    break;
-//
-//
-//
+
 
 
 //                case INFO_PARAM_PROCESSING_VERSION:
@@ -441,25 +372,6 @@ public class MetadataUtils {
                     break;
 
 
-//                case "MY_INFO":
-//                    value = getMyInfo();
-//                    break;
-//
-//                case "MY_INFO1":
-//                    value = getMyInfo1();
-//                    break;
-//
-//                case "MY_INFO2":
-//                    value = getMyInfo2();
-//                    break;
-//
-//                case "MY_INFO3":
-//                    value = getMyInfo3();
-//                    break;
-//
-//                case "MY_INFO4":
-//                    value = getMyInfo4();
-//                    break;
             }
 
 
@@ -484,11 +396,11 @@ public class MetadataUtils {
         }
 
         if (value == null) {
-            String startDatetime = getSceneStartDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
-            String endDatetime = getSceneEndDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
+            String startDatetime = getSceneStartDateTime(raster, dateFormatDefault, timeFormatDefault);
+            String endDatetime = getSceneEndDateTime(raster, dateFormatDefault, timeFormatDefault);
 
             if (startDatetime != null && startDatetime.length() > 0 && endDatetime != null && endDatetime.length() > 0) {
-                value = "(" + startDatetime + " - " + endDatetime + ")";
+                value = startDatetime + "  -  " + endDatetime;
             } else if (startDatetime != null && startDatetime.length() > 0) {
                 value = startDatetime;
             } else if (endDatetime != null && endDatetime.length() > 0) {
@@ -499,249 +411,14 @@ public class MetadataUtils {
         return value;
     }
 
-//    public static String getSceneDate(RasterDataNode raster, DATE_FORMAT dateFormat) {
-//
-//        String value = null;
-//
-//        try {
-//            String start_date = getSceneStartDate(raster, dateFormat);
-//            String end_date = getSceneEndDate(raster, dateFormat);
-//
-//            if (start_date != null && start_date.length() > 0 && end_date != null && end_date.length() > 0) {
-//
-//                if (start_date.trim().equals(end_date.trim())) {
-//                    value = start_date;
-//                } else {
-//                    String start_date_unformatted = getSceneStartDate(raster, null);
-//                    String end_date_unformatted = getSceneEndDate(raster, null);
-//
-//                    String start_day = null;
-//                    String start_month = null;
-//                    String start_year = null;
-//
-//                    if (start_date_unformatted != null) {
-//                        String[] start_date_orig_arr = start_date_unformatted.split("-", 3);
-//                        if (start_date_orig_arr != null && start_date_orig_arr.length == 3) {
-//                            start_day = start_date_orig_arr[0];
-//                            start_month = start_date_orig_arr[1];
-//                            start_year = start_date_orig_arr[2];
-//                        }
-//                    }
-//
-//                    String end_day = null;
-//                    String end_month = null;
-//                    String end_year = null;
-//
-//                    if (end_date_unformatted != null) {
-//                        String[] end_date_orig_arr = end_date_unformatted.split("-", 3);
-//                        if (end_date_orig_arr != null && end_date_orig_arr.length == 3) {
-//                            end_day = end_date_orig_arr[0];
-//                            end_month = end_date_orig_arr[1];
-//                            end_year = end_date_orig_arr[2];
-//                        }
-//                    }
-//
-//
-//                    if (start_day != null && start_month != null && start_year != null && end_day != null && end_month != null && end_year != null) {
-//                        if (start_day.equals("01") && end_day.equals("01") && !start_month.equals(end_month)) {
-//                            if (start_year.equals(end_year)) {
-//                                if (start_month.equals("JAN") && end_month.equals("FEB")) {
-//                                    value = "January " + start_year;
-//                                } else if (start_month.equals("FEB") && end_month.equals("MAR")) {
-//                                    value = "February " + start_year;
-//                                } else if (start_month.equals("MAR") && end_month.equals("APR")) {
-//                                    value = "March " + start_year;
-//                                } else if (start_month.equals("APR") && end_month.equals("MAY")) {
-//                                    value = "April " + start_year;
-//                                } else if (start_month.equals("MAY") && end_month.equals("JUN")) {
-//                                    value = "May " + start_year;
-//                                } else if (start_month.equals("JUN") && end_month.equals("JUL")) {
-//                                    value = "June " + start_year;
-//                                } else if (start_month.equals("JUL") && end_month.equals("AUG")) {
-//                                    value = "July " + start_year;
-//                                } else if (start_month.equals("AUG") && end_month.equals("SEP")) {
-//                                    value = "August " + start_year;
-//                                } else if (start_month.equals("SEP") && end_month.equals("OCT")) {
-//                                    value = "September " + start_year;
-//                                } else if (start_month.equals("OCT") && end_month.equals("NOV")) {
-//                                    value = "October " + start_year;
-//                                } else if (start_month.equals("NOV") && end_month.equals("DEC")) {
-//                                    value = "November " + start_year;
-//                                }
-//                            } else {
-//                                if (Integer.valueOf(start_year) == (Integer.valueOf(end_year)) - 1) {
-//                                    if (start_month.equals("DEC") && end_month.equals("JAN")) {
-//                                        value = "December " + start_year;
-//                                    }
-//                                }
-//                            }
-//                        } else if (start_day.equals("01") && end_day.equals("01") && start_month.equals("JAN") && end_month.equals("JAN")) {
-//                            if (Integer.valueOf(start_year) == (Integer.valueOf(end_year)) - 1) {
-//                                value = start_year;
-//                            }
-//                        } else {
-//                            value = "(" + start_date + " - " + end_date + ")";
-//                        }
-//                    } else {
-//                        value = "(" + start_date + " - " + end_date + ")";
-//                    }
-//                }
-//            } else {
-//                value = start_date;
-//            }
-//
-//        } catch (Exception e) {
-//        }
-//
-//        return value;
-//    }
-
-
-//    public static String getSceneDateTime(RasterDataNode raster, DATE_FORMAT dateFormat, TIME_FORMAT timeFormat, boolean startTimeOnly) {
-//
-//        String value = null;
-//        try {
-//            String start_date = getSceneStartDate(raster, dateFormat);
-//            String start_time_only = getSceneStartTimeOnly(raster, timeFormat);
-//
-//            String start_datetime = start_date;
-//            if (start_time_only != null && start_time_only.length() > 0) {
-//                start_datetime = start_date + " " + start_time_only;
-//            }
-//
-//
-//            String end_date = getSceneEndDate(raster, dateFormat);
-//            String end_time_only = getSceneEndTimeOnly(raster, timeFormat);
-//
-//            String end_datetime = start_date;
-//            if (end_time_only != null && end_time_only.length() > 0) {
-//                end_datetime = end_date + " " + end_time_only;
-//            }
-//
-//
-//            if (!startTimeOnly && start_datetime != null && start_datetime.length() > 0 && end_datetime != null && end_datetime.length() > 0) {
-//                if (start_datetime.trim().equals(end_datetime.trim())) {
-//                    value = start_datetime;
-//                } else {
-//                    value = "(" + start_datetime + " - " + end_datetime + ")";
-//                }
-//            } else {
-//                value = start_datetime;
-//            }
-//
-//        } catch (Exception e) {
-//        }
-//
-//        return value;
-//    }
-
-
-//    public static String getSceneStartTime(RasterDataNode raster, TIME_FORMAT timeFormat) {
-//
-//        String startDateTime = getSceneStartDateTime(raster);
-//
-//        if (startDateTime != null) {
-//            return getSceneTimeOnly(startDateTime, timeFormat);
-//        }
-//
-//        return "";
-//    }
-//
-//
-//    public static String getSceneEndTime(RasterDataNode raster, TIME_FORMAT timeFormat) {
-//
-//        String endDateTime = getSceneEndDateTime(raster);
-//
-//        if (endDateTime != null) {
-//            return getSceneTimeOnly(endDateTime, timeFormat);
-//        }
-//
-//        return "";
-//    }
-
-//    public static String getSceneStartDate(RasterDataNode raster, DATE_FORMAT dateFormat) {
-//
-//        String startDateTime = getSceneStartDateTime(raster);
-//
-//        if (startDateTime != null) {
-//            return getSceneDateInnerMethod(startDateTime, dateFormat);
-//        }
-//
-//        return "";
-//    }
-//
-//
-//    public static String getSceneEndDate(RasterDataNode raster, DATE_FORMAT dateFormat) {
-//
-//        String endDateTime = getSceneEndDateTime(raster);
-//
-//        if (endDateTime != null) {
-//            return getSceneDateInnerMethod(endDateTime, dateFormat);
-//        }
-//
-//        return "";
-//    }
-
-
-//    public static String getSceneStartDateTime(RasterDataNode raster) {
-//        try {
-//            String sceneStartTimeMeta = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_START_TIME_KEYS);
-//
-//            if (sceneStartTimeMeta != null && sceneStartTimeMeta.length() > 0) {
-//                ProductData.UTC start_datetime = ProductUtils.parseUtcDate(sceneStartTimeMeta);
-//                if (start_datetime != null) {
-//                    return start_datetime.toString();
-//                }
-//            }
-//        } catch (Exception e) {
-//        }
-//
-//        return "";
-//    }
-
-
-//    public static String getSceneEndDateTime(RasterDataNode raster) {
-//        try {
-//            String sceneEndTimeMeta = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_END_TIME_KEYS);
-//
-//            if (sceneEndTimeMeta != null && sceneEndTimeMeta.length() > 0) {
-//                ProductData.UTC endDatetime = ProductUtils.parseUtcDate(sceneEndTimeMeta);
-//                if (endDatetime != null) {
-//                    return endDatetime.toString();
-//                }
-//            }
-//        } catch (Exception e) {
-//        }
-//
-//        return "";
-//    }
-
-
-//    public static String getSceneEndDate(RasterDataNode raster, DATE_FORMAT dateFormat) {
-//        String start_datetime = raster.getProduct().getEndTime().toString();
-//        return getSceneDateInnerMethod(start_datetime, dateFormat);
-//    }
-
-//    public static String getSceneEndDate(RasterDataNode raster, DATE_FORMAT dateFormat) {
-//
-//        try {
-//            String sceneEndTimeMeta = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_END_TIME_KEYS);
-//
-//            if (sceneEndTimeMeta != null && sceneEndTimeMeta.length() > 0) {
-//                ProductData.UTC end_datetime = ProductUtils.parseUtcDate(sceneEndTimeMeta);
-//                return getSceneDateInnerMethod(end_datetime.toString(), dateFormat);
-//            }
-//        } catch (Exception e) {
-//        }
-//
-//        return "";
-//    }
-
 
     public static String getSceneStartDateTime(RasterDataNode raster, DATE_FORMAT dateFormat, TIME_FORMAT timeFormat) {
 
         String sceneStartTimeMeta = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_START_TIME_KEYS);
         if (sceneStartTimeMeta != null && sceneStartTimeMeta.length() > 0) {
+            if ((dateFormat == null && timeFormat == null) || (dateFormat == DATE_FORMAT.NONE && timeFormat == TIME_FORMAT.NONE)) {
+                return sceneStartTimeMeta;
+            }
             return getSceneDateTime(sceneStartTimeMeta, dateFormat, timeFormat);
         }
         return "";
@@ -752,6 +429,9 @@ public class MetadataUtils {
 
         String sceneEndTimeMeta = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_END_TIME_KEYS);
         if (sceneEndTimeMeta != null && sceneEndTimeMeta.length() > 0) {
+            if ((dateFormat == null && timeFormat == null) || (dateFormat == DATE_FORMAT.NONE && timeFormat == TIME_FORMAT.NONE)) {
+                return sceneEndTimeMeta;
+            }
             return getSceneDateTime(sceneEndTimeMeta, dateFormat, timeFormat);
         }
         return "";
@@ -936,6 +616,7 @@ public class MetadataUtils {
         return month;
     }
 
+
     public static String formatMonthCamelShort(String month) {
 
         if (month == null) {
@@ -974,61 +655,6 @@ public class MetadataUtils {
         return month;
     }
 
-//
-//    public static String getSceneStartTimeOnly(RasterDataNode raster, TIME_FORMAT timeFormat) {
-//        String start_datetime = raster.getProduct().getStartTime().toString();
-//        return getSceneTimeOnly(start_datetime, timeFormat);
-//    }
-//
-//    public static String getSceneEndTimeOnly(RasterDataNode raster, TIME_FORMAT timeFormat) {
-//        String end_datetime = raster.getProduct().getEndTime().toString();
-//        return getSceneTimeOnly(end_datetime, timeFormat);
-//    }
-//
-//
-//    public static String getSceneTimeOnly(String datetime, TIME_FORMAT timeFormat) {
-//        String[] end_datetime_arr = datetime.split("\\s+", 2);
-//
-//        if (end_datetime_arr.length > 1) {
-//            String time_only = end_datetime_arr[1];
-//
-//            if (timeFormat == null) {
-//                return time_only;
-//            }
-//
-//            if (timeFormat == TIME_FORMAT.HH_MM_SS || timeFormat == TIME_FORMAT.HH_MM) {
-//                String[] time_milli_split = time_only.split("\\.");
-//
-//                if (time_milli_split.length > 0) {
-//                    String[] time_parts = time_milli_split[0].split(":");
-//
-//                    String hour = "";
-//                    String minute = "";
-//                    String second = "";
-//                    if (time_parts.length >= 2) {
-//                        hour = time_parts[0];
-//                        minute = time_parts[1];
-//                    }
-//
-//                    if (time_parts.length >= 3) {
-//                        second = time_parts[2];
-//                    }
-//
-//                    if (timeFormat == TIME_FORMAT.HH_MM) {
-//                        return hour + ":" + minute;
-//                    } else {
-//                        return time_milli_split[0];
-//                    }
-//                } else {
-//                    return "";
-//                }
-//            } else {
-//                return time_only;
-//            }
-//        } else {
-//            return "";
-//        }
-//    }
 
 
     public static String getReplacedStringAllVariables(String inputText, RasterDataNode raster, String delimiter, String percentD_ReplacementKey) {
