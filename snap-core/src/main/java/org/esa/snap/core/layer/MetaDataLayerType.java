@@ -115,9 +115,9 @@ public class MetaDataLayerType extends LayerType {
     public static final String PROPERTY_MARGIN_GAP_LABEL = "Margin Gap";
     public static final String PROPERTY_MARGIN_GAP_TOOLTIP = "Percentage of scene size to place metadata away from the edge of the scene image";
     private static final String PROPERTY_MARGIN_GAP_ALIAS = PROPERTY_MARGIN_ROOT_ALIAS + "Offset";
-    public static final Double PROPERTY_MARGIN_GAP_DEFAULT = 50.0;
-    public static final double PROPERTY_MARGIN_GAP_MIN = -100;
-    public static final double PROPERTY_MARGIN_GAP_MAX = 100;
+    public static final Double PROPERTY_MARGIN_GAP_DEFAULT = 70.0;
+    public static final double PROPERTY_MARGIN_GAP_MIN = -200;
+    public static final double PROPERTY_MARGIN_GAP_MAX = 200;
     public static final String PROPERTY_MARGIN_GAP_INTERVAL = "[" + MetaDataLayerType.PROPERTY_MARGIN_GAP_MIN + "," + MetaDataLayerType.PROPERTY_MARGIN_GAP_MAX + "]";
     public static final Class PROPERTY_MARGIN_GAP_TYPE = Double.class;
 
@@ -333,7 +333,7 @@ public class MetaDataLayerType extends LayerType {
     public static final String PROPERTY_HEADER_TEXTFIELD2_LABEL = "Header Text";
     public static final String PROPERTY_HEADER_TEXTFIELD2_TOOLTIP = "Adds a line to title/header to the Header-Footer Layer";
     public static final String PROPERTY_HEADER_TEXTFIELD2_ALIAS = PROPERTY_HEADER_CONTENTS_ROOT_ALIAS + "Textfield2";
-    public static final String PROPERTY_HEADER_TEXTFIELD2_DEFAULT = "<PROPERTY=scene_date_long><br>File: <PROPERTY=file>";
+    public static final String PROPERTY_HEADER_TEXTFIELD2_DEFAULT = "<PROPERTY=scene_date><br>File: <PROPERTY=file>";
     public static final Class PROPERTY_HEADER_TEXTFIELD2_TYPE = String.class;
 
     public static final String PROPERTY_HEADER_TEXTFIELD3_KEY = PROPERTY_HEADER_CONTENTS_ROOT_KEY + ".textfield3";
@@ -395,7 +395,7 @@ public class MetaDataLayerType extends LayerType {
     public static final String PROPERTY_HEADER_GAP_LABEL = "Header Gap";
     public static final String PROPERTY_HEADER_GAP_TOOLTIP = "Percentage of scene size to place header away from the edge of the scene image";
     private static final String PROPERTY_HEADER_GAP_ALIAS = PROPERTY_HEADER_FORMAT_ROOT_ALIAS + "Offset";
-    public static final Double PROPERTY_HEADER_GAP_DEFAULT = 6.0;
+    public static final Double PROPERTY_HEADER_GAP_DEFAULT = 5.0;
     public static final double PROPERTY_HEADER_GAP_MIN = -100;
     public static final double PROPERTY_HEADER_GAP_MAX = 100;
     public static final String PROPERTY_HEADER_GAP_INTERVAL = "[" + PROPERTY_HEADER_GAP_MIN + "," + PROPERTY_HEADER_GAP_MAX + "]";
