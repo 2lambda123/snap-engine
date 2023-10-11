@@ -27,6 +27,9 @@ public class MetadataUtils {
     }
 
     private static final String INFO_PARAM_FILE = "FILE";
+    private static final String INFO_PARAM_TEMPORAL_RANGE_PARENTHESIS = "TEMPORAL_RANGE_PARENTHESIS";
+    private static final String INFO_PARAM_MISSION_LEVEL_INFO = "MISSION_LEVEL_INFO";
+    private static final String INFO_PARAM_MISSION_LEVEL_TEMPORAL_INFO = "MISSION_LEVEL_TEMPORAL_INFO";
     private static final String INFO_PARAM_PROCESSING_VERSION = "PROCESSING_VERSION";
     private static final String INFO_PARAM_SENSOR = "SENSOR";
     private static final String INFO_PARAM_PLATFORM = "PLATFORM";
@@ -41,21 +44,22 @@ public class MetadataUtils {
     private static final String INFO_PARAM_BAND_DESCRIPTION = "BAND_DESCRIPTION";
     private static final String INFO_PARAM_FILE_LOCATION = "FILE_LOCATION";
     private static final String INFO_PARAM_PRODUCT_TYPE = "PRODUCT_TYPE";
-    private static final String INFO_PARAM_SCENE_DATE_MONTHDDYYY = "SCENE_DATE_MONTHDDYYY";
-    private static final String INFO_PARAM_SCENE_DATE_MMDDYYY = "SCENE_DATE_MMDDYYY";
+    private static final String INFO_PARAM_SCENE_DATE_INFO = "SCENE_DATE_INFO";
+    private static final String INFO_PARAM_SCENE_DATE_MONTHDDYYYY = "SCENE_DATE_MONTHDDYYYY";
+    private static final String INFO_PARAM_SCENE_DATE_MMMDDYYYY = "SCENE_DATE_MMMDDYYYY";
     private static final String INFO_PARAM_SCENE_DATE_DDMONTHYYYY = "SCENE_DATE_DDMONTHYYYY";
     private static final String INFO_PARAM_SCENE_DATE_DDMMMYYYY = "SCENE_DATE_DDMMMYYYY";
 
     private static final String INFO_PARAM_SCENE_START_TIME = "SCENE_START_TIME";
-    private static final String INFO_PARAM_SCENE_START_TIME_MONTHDDYYY = "SCENE_START_TIME_MONTHDDYYY";
+    private static final String INFO_PARAM_SCENE_START_TIME_MONTHDDYYYY = "SCENE_START_TIME_MONTHDDYYYY";
     private static final String INFO_PARAM_SCENE_START_TIME_DDMONTHYYYY = "SCENE_START_TIME_DDMONTHYYYY";
-    private static final String INFO_PARAM_SCENE_START_TIME_MMMDDYYY = "SCENE_START_TIME_MMMDDYYY";
+    private static final String INFO_PARAM_SCENE_START_TIME_MMMDDYYYY = "SCENE_START_TIME_MMMDDYYYY";
     private static final String INFO_PARAM_SCENE_START_TIME_DDMMMYYYY = "SCENE_START_TIME_DDMMMYYYY";
 
     private static final String INFO_PARAM_SCENE_END_TIME = "SCENE_END_TIME";
-    private static final String INFO_PARAM_SCENE_END_TIME_MONTHDDYYY = "SCENE_END_TIME_MONTHDDYYY";
+    private static final String INFO_PARAM_SCENE_END_TIME_MONTHDDYYYY = "SCENE_END_TIME_MONTHDDYYYY";
     private static final String INFO_PARAM_SCENE_END_TIME_DDMONTHYYYY = "SCENE_END_TIME_DDMONTHYYYY";
-    private static final String INFO_PARAM_SCENE_END_TIME_MMMDDYYY = "SCENE_END_TIME_MMMDDYYY";
+    private static final String INFO_PARAM_SCENE_END_TIME_MMMDDYYYY = "SCENE_END_TIME_MMMDDYYYY";
     private static final String INFO_PARAM_SCENE_END_TIME_DDMMMYYYY = "SCENE_END_TIME_DDMMMYYYY";
     
     private static final String INFO_PARAM_SCENE_HEIGHT = "SCENE_HEIGHT";
@@ -95,20 +99,22 @@ public class MetadataUtils {
             INFO_PARAM_BAND_DESCRIPTION,
             INFO_PARAM_FILE_LOCATION,
             INFO_PARAM_PRODUCT_TYPE,
-
-            INFO_PARAM_SCENE_DATE_MONTHDDYYY,
-            INFO_PARAM_SCENE_DATE_MMDDYYY,
+            INFO_PARAM_TEMPORAL_RANGE_PARENTHESIS,
+            INFO_PARAM_MISSION_LEVEL_INFO,
+            INFO_PARAM_MISSION_LEVEL_TEMPORAL_INFO,
+            INFO_PARAM_SCENE_DATE_INFO,
+            INFO_PARAM_SCENE_DATE_MMMDDYYYY,
             INFO_PARAM_SCENE_DATE_DDMONTHYYYY,
             INFO_PARAM_SCENE_DATE_DDMMMYYYY,
             INFO_PARAM_SCENE_START_TIME,
-            INFO_PARAM_SCENE_START_TIME_MONTHDDYYY,
+            INFO_PARAM_SCENE_START_TIME_MONTHDDYYYY,
             INFO_PARAM_SCENE_START_TIME_DDMONTHYYYY,
-            INFO_PARAM_SCENE_START_TIME_MMMDDYYY,
+            INFO_PARAM_SCENE_START_TIME_MMMDDYYYY,
             INFO_PARAM_SCENE_START_TIME_DDMMMYYYY,
             INFO_PARAM_SCENE_END_TIME,
-            INFO_PARAM_SCENE_END_TIME_MONTHDDYYY,
+            INFO_PARAM_SCENE_END_TIME_MONTHDDYYYY,
             INFO_PARAM_SCENE_END_TIME_DDMONTHYYYY,
-            INFO_PARAM_SCENE_END_TIME_MMMDDYYY,
+            INFO_PARAM_SCENE_END_TIME_MMMDDYYYY,
             INFO_PARAM_SCENE_END_TIME_DDMMMYYYY,
             
             INFO_PARAM_SCENE_HEIGHT,
@@ -163,27 +169,34 @@ public class MetadataUtils {
                     }
                     break;
 
-                case INFO_PARAM_SCENE_DATE_MONTHDDYYY:
-                    value = getSceneDate1(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+
+
+
+                case INFO_PARAM_SCENE_DATE_INFO:
+                    value = getSceneDate(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS, true);
                     break;
 
-                case INFO_PARAM_SCENE_DATE_MMDDYYY:
-                    value = getSceneDate1(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
+                case INFO_PARAM_SCENE_DATE_MONTHDDYYYY:
+                    value = getSceneDate(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS, false);
+                    break;
+
+                case INFO_PARAM_SCENE_DATE_MMMDDYYYY:
+                    value = getSceneDate(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS, false);
                     break;
 
                 case INFO_PARAM_SCENE_DATE_DDMONTHYYYY:
-                    value = getSceneDate1(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
+                    value = getSceneDate(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS, false);
                     break;
 
                 case INFO_PARAM_SCENE_DATE_DDMMMYYYY:
-                    value = getSceneDate1(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
+                    value = getSceneDate(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS, false);
                     break;
 
                 case INFO_PARAM_SCENE_START_TIME:
                     value = getSceneStartDateTime(raster, null, null);
                     break;
 
-                case INFO_PARAM_SCENE_START_TIME_MONTHDDYYY:
+                case INFO_PARAM_SCENE_START_TIME_MONTHDDYYYY:
                     value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
@@ -191,7 +204,7 @@ public class MetadataUtils {
                     value = getSceneStartDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_START_TIME_MMMDDYYY:
+                case INFO_PARAM_SCENE_START_TIME_MMMDDYYYY:
                     value = getSceneStartDateTime(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
@@ -205,7 +218,7 @@ public class MetadataUtils {
                     value = getSceneEndDateTime(raster, null, null);
                     break;
 
-                case INFO_PARAM_SCENE_END_TIME_MONTHDDYYY:
+                case INFO_PARAM_SCENE_END_TIME_MONTHDDYYYY:
                     value = getSceneEndDateTime(raster, DATE_FORMAT.MONTH_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
@@ -213,12 +226,33 @@ public class MetadataUtils {
                     value = getSceneEndDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
-                case INFO_PARAM_SCENE_END_TIME_MMMDDYYY:
+                case INFO_PARAM_SCENE_END_TIME_MMMDDYYYY:
                     value = getSceneEndDateTime(raster, DATE_FORMAT.MMM_DD_YYYY, TIME_FORMAT.HH_MM_SS);
                     break;
 
                 case INFO_PARAM_SCENE_END_TIME_DDMMMYYYY:
                     value = getSceneEndDateTime(raster, DATE_FORMAT.DD_MMM_YYYY, TIME_FORMAT.HH_MM_SS);
+                    break;
+
+
+
+                case INFO_PARAM_TEMPORAL_RANGE_PARENTHESIS:
+                    try {
+                    value = ProductUtils.getMetaData(raster.getProduct(), "temporal_range");
+                    if (value != null && value.length() > 0) {
+                        value = "(" + value + ")";
+                    }
+                    } catch (Exception e) {
+                    }
+                    break;
+
+
+                case INFO_PARAM_MISSION_LEVEL_INFO:
+                    value = getMissionLevelInfo(raster, false);
+                    break;
+
+                case INFO_PARAM_MISSION_LEVEL_TEMPORAL_INFO:
+                    value = getMissionLevelInfo(raster, true);
                     break;
 
 
@@ -391,7 +425,41 @@ public class MetadataUtils {
         return value;
     }
 
-    public static String getSceneDate1(RasterDataNode raster, DATE_FORMAT dateFormatDefault , TIME_FORMAT timeFormatDefault) {
+    public static String getMissionLevelInfo(RasterDataNode raster, boolean includeTemporalRange) {
+        String value = "";
+
+        try {
+
+            String sensor = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_SENSOR_KEYS);
+            String platform = ProductUtils.getMetaData(raster.getProduct(), ProductUtils.METADATA_POSSIBLE_PLATFORM_KEYS);
+            String productType = raster.getProduct().getProductType();
+
+            if (sensor != null && sensor.length() > 0 && platform != null && platform.length() > 0) {
+                value = platform + "-" + sensor;
+            } else if (sensor != null && sensor.length() > 0) {
+                value = sensor;
+            } else if (platform != null && platform.length() > 0) {
+                value = platform;
+            }
+
+            if (productType != null && productType.length() > 0) {
+                value = value + ": " + productType;
+
+                if (includeTemporalRange) {
+                    String temporalRange = ProductUtils.getMetaData(raster.getProduct(), "temporal_range");
+                    if (temporalRange != null && temporalRange.length() > 0) {
+                        value = value + " (" + temporalRange + ")";
+                    }
+                }
+            }
+        } catch (Exception e) {
+        }
+        return value;
+    }
+
+
+
+    public static String getSceneDate(RasterDataNode raster, DATE_FORMAT dateFormatDefault , TIME_FORMAT timeFormatDefault, boolean addTemporalRange) {
         String value = null;
         String temporalRange = ProductUtils.getMetaData(raster.getProduct(), "temporal_range");
 
@@ -410,11 +478,24 @@ public class MetadataUtils {
             String endDatetime = getSceneEndDateTime(raster, dateFormatDefault, timeFormatDefault);
 
             if (startDatetime != null && startDatetime.length() > 0 && endDatetime != null && endDatetime.length() > 0) {
-                value = startDatetime + "  -  " + endDatetime;
+                value = startDatetime + " - " + endDatetime;
             } else if (startDatetime != null && startDatetime.length() > 0) {
                 value = startDatetime;
             } else if (endDatetime != null && endDatetime.length() > 0) {
                 value = endDatetime;
+            }
+        }
+
+
+        if (addTemporalRange && temporalRange != null && temporalRange.length() > 0) {
+            if ("MONTH".equals(temporalRange.toUpperCase())) {
+                value = getSceneStartDateTime(raster, DATE_FORMAT.MONTH_YYYY, TIME_FORMAT.NONE) + " (Year Composite)";
+            } else if ("DAY".equals(temporalRange.toUpperCase())) {
+                value = getSceneStartDateTime(raster, DATE_FORMAT.DD_MONTH_YYYY, TIME_FORMAT.NONE) + " (Day Composite)";
+            } else if ("YEAR".equals(temporalRange.toUpperCase())) {
+                value = getSceneStartDateTime(raster, DATE_FORMAT.YYYY, TIME_FORMAT.NONE) + " (Month Composite)";
+            } else {
+                value = value + " (" + temporalRange + " Composite)";
             }
         }
 
