@@ -1,0 +1,642 @@
+repo_name: 2lambda123/snap-engine
+report_id: fe4d4b2494adb2aed42880728f208b8f
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-09T08:26:34+00:00'
+requested_by: 2lambda123
+provider: github
+branch: master
+detected_tools_count: 52
+tools:
+- name: C lang
+  description: One of the most widely used programming languages of all time
+  website_url: http://en.wikipedia.org/wiki/C_(programming_language)
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: Haskell
+  description: An advanced purely-functional programming language
+  website_url: http://www.haskell.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1069/oCgm29k9.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-product-library-v2/src/main/resources/org/esa/snap/product/library/v2/database/h2gis-database-script-1.sql
+  detection_source: snap-product-library-v2/src/main/resources/org/esa/snap/product/library/v2/database/h2gis-database-script-1.sql
+  last_updated_by: jeancoravu
+  last_updated_on: 2019-09-09 13:44:04.000000000 Z
+- name: JFreeChart
+  description: A free Java chart library
+  website_url: http://www.jfree.org/jfreechart/
+  license: LGPL-2.1
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Charting Libraries
+  image_url: https://img.stackshare.io/service/8591/Picture_6_400x400.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-pixel-extraction/pom.xml
+  detection_source: snap-pixel-extraction/pom.xml
+  last_updated_by: Luis Veci
+  last_updated_on: 2020-02-05 15:35:36.000000000 Z
+- name: guava
+  description: Google Core Libraries for Java 6+
+  website_url: https://github.com/google/guava
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Java Tools
+  image_url: https://img.stackshare.io/service/2970/wBjKn0ol.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-classification/pom.xml
+  detection_source: snap-classification/pom.xml
+  last_updated_by: lveci
+  last_updated_on: 2016-05-02 02:01:04.000000000 Z
+- name: HSQLDB
+  description: Leading SQL relational database software written in Java
+  website_url: http://hsqldb.org
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/6958/yQ4763oZ_400x400.jpg
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Ralf Quast
+  last_updated_on: 2010-02-16 14:53:19.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-binding/pom.xml
+  detection_source: ceres-binding/pom.xml
+  last_updated_by: norman
+  last_updated_on: 2007-07-17 10:27:56.000000000 Z
+- name: Mockito
+  description: Tasty mocking framework for unit tests in Java
+  website_url: https://site.mockito.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2021/4y634TJm_400x400.jpg
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-metadata/pom.xml
+  detection_source: ceres-metadata/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: SLF4J
+  description: Simple logging facade for Java
+  website_url: http://slf4j.org/
+  open_source: false
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Log Management
+  image_url: https://img.stackshare.io/service/2805/05518ecaa42841e834421e9d6987b04f_400x400.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Ralf Quast
+  last_updated_on: 2010-02-16 14:25:16.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/.travis.yml
+  detection_source: ".travis.yml"
+  last_updated_by: Julien Malik
+  last_updated_on: 2015-12-07 12:08:59.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: XSLT
+  description: The official Twitter account for the sum of all knowledge, Wikipedia.
+    Overseen by @jeffelder.
+  website_url: https://en.wikipedia.org/wiki/XSLT
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/4253/nZXfdUQq_normal.jpg
+  detection_source_url: https://github.com/2lambda123/snap-engine
+  detection_source: Repo Metadata
+- name: com.fasterxml.jackson.core:jackson-annotations
+  description: Core annotations used for value types
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-core
+  description: Core Jackson processing abstractions
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-databind
+  description: 'General data-binding functionality for Jackson: works on core streaming
+    API'
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: com.google.guava:guava
+  description: Guava is a suite of core and expanded libraries that include utility
+    classes
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-classification/pom.xml
+  detection_source: snap-classification/pom.xml
+  last_updated_by: lveci
+  last_updated_on: 2017-01-29 04:02:30.000000000 Z
+- name: com.google.jimfs:jimfs
+  description: Jimfs is an in-memory implementation of Java 7's java.nio.file abstract
+    file system API
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-01 09:27:15.000000000 Z
+- name: com.googlecode.json-simple:json-simple
+  description: A simple Java toolkit for JSON
+  version: 1.1.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-remote-execution/pom.xml
+  detection_source: snap-remote-execution/pom.xml
+  last_updated_by: jeancoravu
+  last_updated_on: 2019-04-16 07:16:41.000000000 Z
+- name: com.jcraft:jsch
+  description: JSch is a pure Java implementation of SSH2
+  version: 0.1.54
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-remote-execution/pom.xml
+  detection_source: snap-remote-execution/pom.xml
+  last_updated_by: jeancoravu
+  last_updated_on: 2019-04-16 07:16:41.000000000 Z
+- name: com.thoughtworks.xstream:xstream
+  description: XStream is a serialization library from Java objects to XML and back
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-22 14:07:10.000000000 Z
+- name: commons-cli:commons-cli
+  description: Apache Commons CLI provides a simple API for presenting
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-04-30 09:07:21.000000000 Z
+- name: commons-codec:commons-codec
+  description: The Apache Commons Codec package contains simple encoder and decoders
+    for various formats such as Base64 and Hexadecimal
+  version: '1.6'
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: commons-collections:commons-collections
+  description: Types that extend and augment the Java Collections Framework
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-22 14:07:10.000000000 Z
+- name: commons-logging:commons-logging
+  description: Apache Commons Logging is a thin adapter allowing configurable bridging
+    to other
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-04-30 09:07:21.000000000 Z
+- name: commons-net:commons-net
+  description: Apache Commons Net library contains a collection of network utilities
+    and protocol implementations
+  version: 3.9.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-01 09:27:15.000000000 Z
+- name: junit:junit
+  description: JUnit is a unit testing framework for Java
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-binding/pom.xml
+  detection_source: ceres-binding/pom.xml
+  last_updated_by: forman
+  last_updated_on: 2015-03-25 15:53:44.000000000 Z
+- name: net.coobird:thumbnailator
+  description: Thumbnailator - a thumbnail generation library for Java
+  version: 0.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-01 09:27:15.000000000 Z
+- name: net.java.dev.jna:jna
+  description: Java Native Access
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/lib-openjpeg/pom.xml
+  detection_source: lib-openjpeg/pom.xml
+  last_updated_by: jeancoravu
+  last_updated_on: 2020-01-14 13:14:59.000000000 Z
+- name: net.java.dev.jna:jna-platform
+  description: Java Native Access Platform
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/lib-openjpeg/pom.xml
+  detection_source: lib-openjpeg/pom.xml
+  last_updated_by: jeancoravu
+  last_updated_on: 2020-01-14 13:14:59.000000000 Z
+- name: net.sourceforge.jexcelapi:jxl
+  description: JExcelApi is a java library which provides the ability to read
+  version: 2.6.12
+  license: LGPL-2.1+
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-arcbingrid-reader/pom.xml
+  detection_source: snap-arcbingrid-reader/pom.xml
+  last_updated_by: marpet
+  last_updated_on: 2015-02-09 17:51:35.000000000 Z
+- name: org.apache.commons:commons-compress
+  description: Apache Commons Compress software defines an API for working with compression
+    and archive formats
+  version: 1.24.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-engine-utilities/pom.xml
+  detection_source: snap-engine-utilities/pom.xml
+  last_updated_by: Luis Veci
+  last_updated_on: 2023-10-11 22:34:35.000000000 Z
+- name: org.apache.commons:commons-lang3
+  description: Apache Commons Lang
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: org.apache.commons:commons-math3
+  description: The Apache Commons Math project is a library of lightweight
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: org.apache.commons:commons-text
+  description: Apache Commons Text is a library focused on algorithms working on strings
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-smart-configurator/pom.xml
+  detection_source: snap-smart-configurator/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-04-30 09:07:21.000000000 Z
+- name: org.apache.httpcomponents:httpclient
+  description: Apache HttpComponents Client
+  version: 4.5.13
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-remote-products-repository/pom.xml
+  detection_source: snap-remote-products-repository/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-06-09 07:19:00.000000000 Z
+- name: org.assertj:assertj-core
+  description: Rich and fluent assertions for testing for Java
+  version: 3.19.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: org.hamcrest:hamcrest
+  description: Core API and libraries of hamcrest matcher framework
+  license: DSDP
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-01 09:27:15.000000000 Z
+- name: org.jdom:jdom2
+  description: A complete
+  license: zlib-acknowledgement
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: org.jfree:jcommon
+  description: JCommon is a free general purpose Java class library that is used in
+    several projects at www.jfree.org
+  license: LGPL-3.0-only
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-pixel-extraction/pom.xml
+  detection_source: snap-pixel-extraction/pom.xml
+  last_updated_by: Luis Veci
+  last_updated_on: 2020-02-05 15:35:36.000000000 Z
+- name: org.jfree:jfreechart
+  description: JFreeChart is a class library, written in Java, for generating charts
+  license: LGPL-3.0-only
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-pixel-extraction/pom.xml
+  detection_source: snap-pixel-extraction/pom.xml
+  last_updated_by: Luis Veci
+  last_updated_on: 2020-02-05 15:35:36.000000000 Z
+- name: org.jsoup:jsoup
+  description: Jsoup is a Java library for working with real-world HTML
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-dem/pom.xml
+  detection_source: snap-dem/pom.xml
+  last_updated_by: Tonio Fincke
+  last_updated_on: 2020-01-10 12:09:33.000000000 Z
+- name: org.locationtech.jts:jts-core
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-core/pom.xml
+  detection_source: snap-core/pom.xml
+  last_updated_by: Tom
+  last_updated_on: 2023-08-24 15:37:21.000000000 Z
+- name: org.mockito:mockito-core
+  description: Mockito mock objects library core API and implementation
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-metadata/pom.xml
+  detection_source: ceres-metadata/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: org.slf4j:slf4j-api
+  description: The slf4j API
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2023-05-10 14:17:15.000000000 Z
+- name: org.slf4j:slf4j-simple
+  description: SLF4J Simple binding
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-netcdf/pom.xml
+  detection_source: snap-netcdf/pom.xml
+  last_updated_by: Marco Peters
+  last_updated_on: 2020-04-02 07:32:18.000000000 Z
+- name: org.swinglabs.swingx:swingx-all
+  description: A Maven project to aggregate all modules into a single artifact
+  license: LGPL-3.0-only
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-ui/pom.xml
+  detection_source: ceres-ui/pom.xml
+  last_updated_by: Tonio Fincke
+  last_updated_on: 2020-01-10 12:09:33.000000000 Z
+- name: oro:oro
+  version: 2.0.8
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/snap-sta/pom.xml
+  detection_source: snap-sta/pom.xml
+  last_updated_by: Cosmin Cara
+  last_updated_on: 2015-05-27 17:21:30.000000000 Z
+- name: rhino:js
+  description: Artifactory auto generated POM
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-jai/pom.xml
+  detection_source: ceres-jai/pom.xml
+  last_updated_by: ralf
+  last_updated_on: 2009-10-26 10:57:31.000000000 Z
+- name: xpp3:xpp3_min
+  description: MXP1 is a stable XmlPull parsing engine that is based on ideas from
+    XPP and in particular XPP2 but completely revised and rewritten to take the best
+    advantage of latest JIT JVMs...
+  license: Unlicense
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/snap-engine/blob/master/ceres-core/pom.xml
+  detection_source: ceres-core/pom.xml
+  last_updated_by: marpet
+  last_updated_on: 2015-04-01 08:59:30.000000000 Z
