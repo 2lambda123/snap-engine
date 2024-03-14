@@ -3,18 +3,18 @@
 ## Tech Stack
 2lambda123/snap-engine is built on the following main stack:
 
-- [Java](https://www.java.com) – Languages
-- [Haskell](http://www.haskell.org/) – Languages
 - [C lang](http://en.wikipedia.org/wiki/C_(programming_language)) – Languages
+- [Haskell](http://www.haskell.org/) – Languages
+- [Java](https://www.java.com) – Languages
+- [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
+- [JFreeChart](http://www.jfree.org/jfreechart/) – Charting Libraries
+- [guava](https://github.com/google/guava) – Java Tools
+- [HSQLDB](http://hsqldb.org) – Databases
 - [JUnit](http://junit.org/) – Testing Frameworks
 - [Mockito](https://site.mockito.org/) – Testing Frameworks
-- [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
 - [SLF4J](http://slf4j.org/) – Log Management
-- [guava](https://github.com/google/guava) – Java Tools
-- [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- [HSQLDB](http://hsqldb.org) – Databases
-- [JFreeChart](http://www.jfree.org/jfreechart/) – Charting Libraries
 - [Travis CI](http://travis-ci.com/) – Continuous Integration
+- [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
 
@@ -24,18 +24,18 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 2lambda123/snap-engine is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/995/K85ZWV2F.png' alt='Java'/> [Java](https://www.java.com) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1069/oCgm29k9.png' alt='Haskell'/> [Haskell](http://www.haskell.org/) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='C lang'/> [C lang](http://en.wikipedia.org/wiki/C_(programming_language)) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1069/oCgm29k9.png' alt='Haskell'/> [Haskell](http://www.haskell.org/) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/995/K85ZWV2F.png' alt='Java'/> [Java](https://www.java.com) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png' alt='SQL'/> [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/8591/Picture_6_400x400.png' alt='JFreeChart'/> [JFreeChart](http://www.jfree.org/jfreechart/) – Charting Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/2970/wBjKn0ol.png' alt='guava'/> [guava](https://github.com/google/guava) – Java Tools
+- <img width='25' height='25' src='https://img.stackshare.io/service/6958/yQ4763oZ_400x400.jpg' alt='HSQLDB'/> [HSQLDB](http://hsqldb.org) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/2020/874086.png' alt='JUnit'/> [JUnit](http://junit.org/) – Testing Frameworks
 - <img width='25' height='25' src='https://img.stackshare.io/service/2021/4y634TJm_400x400.jpg' alt='Mockito'/> [Mockito](https://site.mockito.org/) – Testing Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png' alt='SQL'/> [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2805/05518ecaa42841e834421e9d6987b04f_400x400.png' alt='SLF4J'/> [SLF4J](http://slf4j.org/) – Log Management
-- <img width='25' height='25' src='https://img.stackshare.io/service/2970/wBjKn0ol.png' alt='guava'/> [guava](https://github.com/google/guava) – Java Tools
-- <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- <img width='25' height='25' src='https://img.stackshare.io/service/6958/yQ4763oZ_400x400.jpg' alt='HSQLDB'/> [HSQLDB](http://hsqldb.org) – Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/8591/Picture_6_400x400.png' alt='JFreeChart'/> [JFreeChart](http://www.jfree.org/jfreechart/) – Charting Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](http://travis-ci.com/) – Continuous Integration
+- <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
 
@@ -46,7 +46,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [2lambda123/snap-engine](https://github.com/2lambda123/snap-engine)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|52<br/>Tools used|01/09/24 <br/>Report generated|
+|52<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -220,7 +220,7 @@ Full tech stack [here](/techstack.md)
 |[net.java.dev.jna:jna](https://github.com/java-native-access/jna)|N/A|01/14/20|jeancoravu |Apache-2.0|N/A|
 |[net.java.dev.jna:jna-platform](https://github.com/java-native-access/jna)|N/A|01/14/20|jeancoravu |Apache-2.0|N/A|
 |[net.sourceforge.jexcelapi:jxl](http://www.jexcelapi.org)|v2.6.12|02/09/15|marpet |LGPL-2.1+|N/A|
-|[org.apache.commons:commons-compress](https://commons.apache.org/proper/commons-compress/)|v1.24.0|10/11/23|Luis Veci |Apache-2.0|N/A|
+|[org.apache.commons:commons-compress](https://commons.apache.org/proper/commons-compress/)|v1.24.0|10/11/23|Luis Veci |Apache-2.0|[CVE-2024-25710](https://github.com/advisories/GHSA-4g9r-vxhx-9pgx) (High)<br/>[CVE-2024-26308](https://github.com/advisories/GHSA-4265-ccf5-phj5) (High)|
 |[org.apache.commons:commons-lang3](http://commons.apache.org/proper/commons-lang/)|N/A|05/10/23|Marco Peters |Apache-2.0|N/A|
 |[org.apache.commons:commons-math3](http://commons.apache.org/proper/commons-math/)|N/A|05/10/23|Marco Peters |Apache-2.0|N/A|
 |[org.apache.commons:commons-text](http://commons.apache.org/proper/commons-text)|N/A|04/30/23|Marco Peters |Apache-2.0|N/A|
